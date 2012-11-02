@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Power Hour Drinking Game</title>
+    <!-- Bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-progress.js"></script>
+  </head>
+  <body>
+      <audio id="beer-sound" preload="auto">
+           <source src="beer.wav" type="audio/wav">
+      Your browser does not support this audio format.
+      </audio>
+
+	<div class="container">	
+
+        <h1 class="center-text">Power Hour</h1>
+        <h2 class="center-text">How many shots?</h2>
+        <form name="start-form" class="center-text">
+            
+            <div class="input-prepend input-append center-text">
+                <span class="add-on"><div class="row"><div class="span3">30 shots</div></div></span><button class="btn btn-success start-button" id="start-button-30" type="button" value="30">Go!</button>
+            </div>
+            <div class="input-prepend input-append center-text">
+                <span class="add-on "><div class="row"><div class="span3">60 shots</div></div></span><button class="btn btn-warning start-button" id="start-button-60" type="button" value="60">Go!</button>
+            </div>
+            <div class="input-prepend input-append center-text">
+                <span class="add-on "><div class="row"><div class="span3">100 shots</div></div></span><button class="btn btn-danger start-button" id="start-button-100" type="button" value="100">Go!</button>
+            </div>
+            
+        </form>
+        
+        <div class="row center-text">
+            
+            <div class="span4"><h4>Rule 1</h4>Drink 1 shot of beer every minute.</div>
+            <div class="span4"><h4>Rule 2</h4>Don't puke.</div>
+            <div class="span4"><h4>Rule 3</h4>If you puke you can keep playing as an "honorary" competitor.</div>
+            
+        </div>
+        
+        <div class="row center-text" id="counter-section">
+            <div id="seconds-countdown-div"></div>
+            
+            <div class="progress animated active" id="next-shot-progress-bar">
+              <div class="bar" ></div>
+            </div>
+            
+            <div class="progress animated active" id="game-progress-bar">
+              <div class="bar" ></div>
+            </div>
+            
+            <div id="counter"></div>
+            <button class="btn btn-large btn-danger disabled" id="stop" type="button" disabled="ture">Stop/Reset</button>
+            
+        </div>
+	</div>
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-36039568-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+	<script>
+	    var stopbutton;
+	    var currentselection;
+	    var previousselection;
+	    var selectionddifference;
+	    var shotstogo;
+	    var counterhtml;
+	    var secondsCountdownHTML;
+	    var shotBarProgress = 0;
+	    var secToGo = 0;
+	    var audio = $("#beer-sound")[0];
+	    var secondsTimeout;
+
+        
+	    
+	    $(".start-button").click(function() {
+	        audio.play();
+	        
+	        if (currentselection == null)
+	        {
+	            secToGo = 1;
+	            currentselection = $(this).val();
+	            shotstogo = currentselection - 1;
+	            
+    			counterhtml = "<h3>" + shotstogo + " shots to go!</h3>";
+    			$("#counter").html(counterhtml);
+    			shotBarProgress = (1 / currentselection) * 100;
+    			$("#game-progress-bar").progress(shotBarProgress);
+    			
+    			$("#next-shot-progress-bar").progress((secToGo / 60) * 100);
+    			secondsCountdownHTML = "<h4>Next shot in " + (60 - secToGo) + " seconds.</h4>";
+    			$("#seconds-countdown-div").html(secondsCountdownHTML);
+    			
+    			(function secondsCountdown() {
+                	secondsTimeout = setTimeout(function() {
+                		if (secToGo++ <60){
+                			$("#next-shot-progress-bar").progress((secToGo / 60) * 100);
+                			secondsCountdownHTML = "<h4>Next shot in " + (60 - secToGo) + " seconds.</h4>";
+                			$("#seconds-countdown-div").html(secondsCountdownHTML);
+                		    secondsCountdown();
+                		}
+                	}, 1000);
+                })();
+	        }
+	        
+	        else if ($(this).val() != currentselection)
+	        {
+	            
+	            previousselection = Math.abs(currentselection);
+	            
+	            currentselection = $(this).val();
+	            selectionddifference = currentselection - previousselection;
+			    shotstogo = shotstogo + selectionddifference;
+			    counterhtml = "<h3>" + shotstogo + " shots to go!</h3>";
+    			$("#counter").html(counterhtml);
+			    clearTimeout(stopbutton);
+			    clearTimeout(secondsTimeout);
+			    
+			    secToGo = 1;
+			    $("#next-shot-progress-bar").progress((secToGo / 60) * 100);
+    			secondsCountdownHTML = "<h4>Next shot in " + (60 - secToGo) + " seconds.</h4>";
+    			$("#seconds-countdown-div").html(secondsCountdownHTML);
+    			
+    			(function secondsCountdown() {
+                	secondsTimeout = setTimeout(function() {
+                		if (secToGo++ <60){
+                			$("#next-shot-progress-bar").progress((secToGo / 60) * 100);
+                			secondsCountdownHTML = "<h4>Next shot in " + (60 - secToGo) + " seconds.</h4>";
+                			$("#seconds-countdown-div").html(secondsCountdownHTML);
+                		    secondsCountdown();
+                		}
+                	}, 1000);
+                })();
+			    
+	        }
+	        
+            if (currentselection == 30)
+            {
+                $("#start-button-30").addClass("disabled");
+                $("#start-button-30").prop("disabled",true);
+            }
+            else if (currentselection == 60)
+            {
+                $("#start-button-30").addClass("disabled");
+                $("#start-button-30").prop("disabled",true);
+                $("#start-button-60").addClass("disabled");
+                $("#start-button-60").prop("disabled",true);
+            }
+            else if (currentselection == 100)
+            {
+                $("#start-button-30").addClass("disabled");
+                $("#start-button-30").prop("disabled",true);
+                $("#start-button-60").addClass("disabled");
+                $("#start-button-60").prop("disabled",true);
+                $("#start-button-100").addClass("disabled");
+                $("#start-button-100").prop("disabled",true);
+            }
+            
+            $("#stop").prop("disabled",false);
+            $("#stop").removeClass("disabled");
+            
+			document.getElementById('beer-sound').play();
+			
+            $('html, body').animate({
+                scrollTop: $("#counter-section").offset().top
+             }, 500);
+
+			
+            (function countDown() {
+                
+                
+              stopbutton = setTimeout(function() {
+                  clearTimeout(secondsTimeout);
+                  secToGo = 1;
+                  $("#next-shot-progress-bar").progress((secToGo / 60) * 100);
+                if (shotstogo-- > 0) {
+                  counterhtml = "<h3>" + shotstogo + " shots to go!</h3>";
+                  $("#counter").html(counterhtml);
+                  audio.play();
+                  shotBarProgress = ((currentselection - shotstogo) / currentselection) * 100;
+                  $("#game-progress-bar").progress(shotBarProgress);
+                  
+                  (function secondsCountdown() {
+                  	secondsTimeout = setTimeout(function() {
+                  		if (secToGo++ < 60){
+                  			$("#next-shot-progress-bar").progress((secToGo / 60) * 100);
+                  			secondsCountdownHTML = "<h4>Next shot in " + (60 - secToGo) + " seconds.</h4>";
+                			$("#seconds-countdown-div").html(secondsCountdownHTML);
+                  		secondsCountdown();
+
+                  		}
+                  	}, 1000);
+                  	$("#next-shot-progress-bar").progress((secToGo / 60) * 100);
+          			secondsCountdownHTML = "<h4>Next shot in " + (60 - secToGo) + " seconds.</h4>";
+        			$("#seconds-countdown-div").html(secondsCountdownHTML);
+                  })();
+                  countDown();
+  
+                }
+              }, 60000);
+            })();
+        });
+        
+        $("#stop").click(function() {
+            $('html, body').animate({
+                scrollTop: 0
+             }, 700);
+             
+            $("#stop").prop("disabled",true);
+            $("#stop").addClass("disabled");
+			clearTimeout(stopbutton)
+			
+			stopbutton = null;
+    	    currentselection = null;
+    	    previousselection = null;
+    	    selectionddifference = null;
+    	    shotstogo = null;
+    	    counterhtml = "";
+    	    
+    	    $("#start-button-30").removeClass("disabled");
+            $("#start-button-30").prop("disabled",false);
+            $("#start-button-60").removeClass("disabled");
+            $("#start-button-60").prop("disabled",false);
+            $("#start-button-100").removeClass("disabled");
+            $("#start-button-100").prop("disabled",false);
+            $("#counter").html(counterhtml);
+            
+            secToGo = 0;
+		    $("#next-shot-progress-bar").progress((secToGo / 60) * 100);
+			secondsCountdownHTML = "<h4>Next shot in " + (60 - secToGo) + " seconds.</h4>";
+			$("#seconds-countdown-div").html(secondsCountdownHTML);
+			clearTimeout(secondsTimeout);
+            
+            
+
+        });
+		
+	</script>
+
+  </body>
+</html>
