@@ -20,3 +20,18 @@
     line-height: 1.25;
     color: #999;
 }
+
+.rules {
+    color: #5a5a5a;
+}
+
+.rules h4 {
+    font-size: 22px;
+    font-weight: 200;
+    margin-bottom: 5px;
+}
+
+.rules p {
+    font-size: 16px;
+    line-height: 1.5;
+}
