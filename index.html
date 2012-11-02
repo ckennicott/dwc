@@ -32,36 +32,35 @@
             <span class="add-on "><div class="row"><div class="span3">100 shots</div></div></span><button class="btn btn-danger start-button" id="start-button-100" type="button" value="100">Go!</button>
         </div>
 
+        <div class="rules">
+            <div class="row center-text">
+                <div class="span4">
+                    <h4>Rule 1</h4>
+                    <p>Drink one shot glass of beer every minute. You'll hear a tone when you need to shoot it!</p>
+                </div>
+                <div class="span4">
+                    <h4>Rule 2</h4>
+                    <p>No puking. If you puke. You're out. Try hard, win big.</p>
+                </div>
+                <div class="span4">
+                    <h4>Rule 3</h4>
+                    <p>If you puke you can keep playing as an "honorary" competitor.</p>
+                </div>
+            </div><!-- End Row -->
+        </div><!-- End Rules -->
         
-        <div class="rules row center-text">
-            <div class="span4">
-                <h4>Rule 1</h4>
-                <p>Drink one shot glass of beer every minute. You'll hear a tone when you need to shoot it!</p>
+        <div class="center-text" id="counter-section">
+            <div class="well">
+                <div id="seconds-countdown-div"></div>
+                <div class="progress animated active" id="next-shot-progress-bar">
+                  <div class="bar" ></div>
+                </div>
             </div>
-            <div class="span4">
-                <h4>Rule 2</h4>
-                <p>No puking. If you puke. You're out. Try hard, win big.</p>
-            </div>
-            <div class="span4">
-                <h4>Rule 3</h4>
-                <p>If you puke you can keep playing as an "honorary" competitor.</p>
-            </div>
-        </div>
-        
-        <div class="row center-text" id="counter-section">
-            <div id="seconds-countdown-div"></div>
-            
-            <div class="progress animated active" id="next-shot-progress-bar">
-              <div class="bar" ></div>
-            </div>
-            
             <div class="progress animated active" id="game-progress-bar">
               <div class="bar" ></div>
             </div>
-            
             <div id="counter"></div>
             <button class="btn btn-large btn-danger disabled" id="stop" type="button" disabled="ture">Stop/Reset</button>
-            
         </div>
 	</div>
     

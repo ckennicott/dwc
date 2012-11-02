@@ -5,7 +5,7 @@
     margin:0 auto;
 }
 
-.jumbo h1 {
+h1 {
     margin: 60px 0 10px;
     font-size: 55px;
     font-weight: 300;
@@ -13,7 +13,7 @@
     letter-spacing: -1px;
 }
 
-.jumbo h2 {
+h2 {
     margin-bottom: 40px;
     font-size: 24px;
     font-weight: 300;
@@ -21,17 +21,18 @@
     color: #999;
 }
 
-.rules {
-    color: #5a5a5a;
-}
-
-.rules h4 {
+h4 {
     font-size: 22px;
     font-weight: 200;
     margin-bottom: 5px;
 }
 
-.rules p {
+p {
     font-size: 16px;
     line-height: 1.5;
+}
+
+.rules {
+    color: #5a5a5a;
+    margin: 4em 0;
 }
