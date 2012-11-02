@@ -1,13 +1,13 @@
 .center-text {
     text-align:center;
 }
-.center-margin {
+.center {
     margin:0 auto;
 }
 
 h1 {
     margin: 60px 0 10px;
-    font-size: 55px;
+    font-size: 60px;
     font-weight: 300;
     line-height: 1;
     letter-spacing: -1px;
@@ -21,10 +21,22 @@ h2 {
     color: #999;
 }
 
-h4 {
+h3, h4 {
+    margin: 60px 0 10px;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+h5 {
     font-size: 22px;
-    font-weight: 200;
+    font-weight: 400;
     margin-bottom: 5px;
+}
+
+#counter-section h4 {
+    font-size: 16px;
 }
 
 p {
@@ -36,3 +48,27 @@ p {
     color: #5a5a5a;
     margin: 4em 0;
 }
+
+.pad_both {
+    padding: 1.5em 0;
+}
+
+.pad_bottom {
+    padding: 0 0 1.5em 0;
+}
+
+.pad_top {
+    padding: 1.5em 0 0 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
