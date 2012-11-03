@@ -13,7 +13,7 @@ body {
     margin: 30px 0;
 }
 
-/* Main marketing message and sign up button */
+/* Main marketing message */
 .jumbotron {
     margin: 60px 0;
     text-align: center;
@@ -22,19 +22,18 @@ body {
     font-size: 72px;
     line-height: 1;
 }
+.jumbotron p {
+    font-size: 21px;
+}
 
-/* Supporting marketing content */
-.marketing {
-    margin: 60px 0;
-}
-.marketing p + h4 {
-    margin-top: 28px;
-}
 
 .counter-section {
-    margin: 60px 0 80px 0;
+    margin: 60px 0 100px 0;
 }
-
+.counter-section h2 {
+    font-size: 35px;
+    line-height: 1;
+}
 .counter-section h3, .counter-section h4 {
     margin: 60px 0 10px;
     font-size: 20px !important;
@@ -42,12 +41,6 @@ body {
     line-height: 1;
     letter-spacing: -1px;
 }
-
-.counter-section h2 {
-    font-size: 35px;
-    line-height: 1;
-}
-
 
 .pad_both {
     padding: 1.5em 0;
@@ -64,6 +57,68 @@ body {
 .pad_top {
     padding: 1.5em 0 0 0;
 }
+
+
+
+/* Tablet
+------------------------- */
+@media (max-width: 767px) {
+    /* Remove any padding from the body */
+    body {
+        padding-top: 5px;
+    }
+    .container-narrow > hr {
+        margin: 15px 0;
+    }
+    .jumbotron {
+        padding: 40px 20px;
+        margin-top:   -20px; /* Offset bottom margin on .navbar */
+        margin-right: -20px;
+        margin-left:  -20px;
+      }
+    .jumbotron h1 {
+        font-size: 50px;
+        line-height: 1;
+    }
+    .jumbotron p {
+        font-size: 18px;
+    }
+    .counter-section h2 {
+        font-size: 30px;
+        line-height: 1;
+    }
+}
+
+
+
+/* Landscape phones
+------------------------- */
+@media (max-width: 480px) {
+        /* Remove any padding from the body */
+        body {
+            padding-top: 0;
+        }
+        .container-narrow > hr {
+            margin: 15px 0;
+        }
+        .jumbotron {
+            padding: 40px 20px;
+            margin-top:   -20px; /* Offset bottom margin on .navbar */
+            margin-right: -20px;
+            margin-left:  -20px;
+          }
+        .jumbotron h1 {
+            font-size: 40px;
+            line-height: 1;
+        }
+        .jumbotron p {
+            font-size: 16px;
+        }
+        .counter-section h2 {
+            font-size: 28px;
+            line-height: 1;
+        }
+    }
 
 
 
