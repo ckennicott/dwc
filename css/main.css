@@ -1,4 +1,130 @@
 body {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+/* Custom container */
+.container-narrow {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message */
+.jumbotron {
+    margin: 60px 0;
+    text-align: center;
+}
+.jumbotron h1 {
+    font-size: 72px;
+    line-height: 1;
+}
+.jumbotron p {
+    font-size: 21px;
+}
+
+
+.counter-section {
+    margin: 60px 0 100px 0;
+}
+.counter-section h2 {
+    font-size: 35px;
+    line-height: 1;
+}
+.counter-section h3, .counter-section h4 {
+    margin: 60px 0 10px;
+    font-size: 20px !important;
+    font-weight: 300;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.pad_both {
+    padding: 1.5em 0;
+}
+
+.pad_both_double {
+    padding: 3em 0;
+}
+
+.pad_bottom {
+    padding: 0 0 1.5em 0;
+}
+
+.pad_top {
+    padding: 1.5em 0 0 0;
+}
+
+
+
+/* Tablet
+------------------------- */
+@media (max-width: 767px) {
+    /* Remove any padding from the body */
+    body {
+        padding-top: 5px;
+    }
+    .container-narrow > hr {
+        margin: 15px 0;
+    }
+    .jumbotron {
+        padding: 40px 20px;
+        margin-top:   -20px; /* Offset bottom margin on .navbar */
+        margin-right: -20px;
+        margin-left:  -20px;
+      }
+    .jumbotron h1 {
+        font-size: 50px;
+        line-height: 1;
+    }
+    .jumbotron p {
+        font-size: 18px;
+    }
+    .counter-section h2 {
+        font-size: 30px;
+        line-height: 1;
+    }
+}
+
+
+
+/* Landscape phones
+------------------------- */
+@media (max-width: 480px) {
+        /* Remove any padding from the body */
+        body {
+            padding-top: 0;
+        }
+        .container-narrow > hr {
+            margin: 15px 0;
+        }
+        .jumbotron {
+            padding: 40px 20px;
+            margin-top:   -20px; /* Offset bottom margin on .navbar */
+            margin-right: -20px;
+            margin-left:  -20px;
+          }
+        .jumbotron h1 {
+            font-size: 40px;
+            line-height: 1;
+        }
+        .jumbotron p {
+            font-size: 16px;
+        }
+        .counter-section h2 {
+            font-size: 28px;
+            line-height: 1;
+        }
+    }
+
+
+
+
+
+/*body {
     background-color: #fcfcfc;
 }
 
@@ -7,9 +133,9 @@ body {
 }
 .center {
     margin:0 auto;
-}
+}*/
 
-h1 {
+/*h1 {
     margin: 60px 0 10px;
     font-size: 60px;
     font-weight: 300;
@@ -19,7 +145,7 @@ h1 {
 
 h2 {
     margin-bottom: 40px;
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 300;
     line-height: 1.25;
     color: #999;
@@ -44,7 +170,7 @@ h5 {
 }
 
 .button-section {
-    margin-top: 4.5em;
+    margin-top: 4.3em;
 }
 
 p {
@@ -67,7 +193,7 @@ p {
 
 .pad_top {
     padding: 1.5em 0 0 0;
-}
+}*/
 
 
 
