@@ -47,6 +47,8 @@ $(document).ready(function(){
             	}, 1000);
 
             })();
+			
+			shotsToGo--;
 
         }
 
