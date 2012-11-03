@@ -1,4 +1,58 @@
 body {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+/* Custom container */
+.container-narrow {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    margin: 60px 0;
+    text-align: center;
+}
+.jumbotron h1 {
+    font-size: 72px;
+    line-height: 1;
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin: 60px 0;
+}
+.marketing p + h4 {
+    margin-top: 28px;
+}
+
+
+.pad_both {
+    padding: 1.5em 0;
+}
+
+.pad_both_double {
+    padding: 3em 0;
+}
+
+.pad_bottom {
+    padding: 0 0 1.5em 0;
+}
+
+.pad_top {
+    padding: 1.5em 0 0 0;
+}
+
+
+
+
+
+/*body {
     background-color: #fcfcfc;
 }
 
@@ -7,9 +61,9 @@ body {
 }
 .center {
     margin:0 auto;
-}
+}*/
 
-h1 {
+/*h1 {
     margin: 60px 0 10px;
     font-size: 60px;
     font-weight: 300;
@@ -67,7 +121,7 @@ p {
 
 .pad_top {
     padding: 1.5em 0 0 0;
-}
+}*/
 
 
 
