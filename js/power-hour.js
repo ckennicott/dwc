@@ -17,6 +17,7 @@ $(document).ready(function(){
     $(".start-button").click(function() {
 
         audio.play();
+        $(".counter-section").fadeIn('slow', function() {});
 
         if (currentSelection == null)
         {
@@ -117,7 +118,7 @@ $(document).ready(function(){
 
         $('html, body').animate({
 
-            scrollTop: $("#counter-section").offset().top
+            scrollTop: $(".counter-section").offset().top
 
          }, 500);
 
