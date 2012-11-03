@@ -9,6 +9,8 @@
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/bootstrap-progress.js"></script>
+    <script type="text/javascript" src="js/power-hour.js"></script>
+    
   </head>
   <body>
       <audio id="beer-sound" preload="auto">
@@ -59,7 +61,7 @@
             <div id="seconds-countdown-div">
                 <h4>Next shot in 0 seconds.</h4>
             </div>
-            <div class="progress animated active" id="next-shot-progress-bar">
+            <div class="progress progress-warning  animated active" id="next-shot-progress-bar">
               <div class="bar" ></div>
             </div>
             
@@ -86,185 +88,6 @@
       })();
 
     </script>
-    
-	<script>
-	    var stopbutton;
-	    var currentselection;
-	    var previousselection;
-	    var selectionddifference;
-	    var shotstogo;
-	    var counterhtml;
-	    var secondsCountdownHTML;
-	    var shotBarProgress = 0;
-	    var secToGo = 0;
-	    var audio = $("#beer-sound")[0];
-	    var secondsTimeout;
-
-        
-	    
-	    $(".start-button").click(function() {
-	        audio.play();
-	        
-	        if (currentselection == null)
-	        {
-	            secToGo = 1;
-	            currentselection = $(this).val();
-	            shotstogo = currentselection - 1;
-	            
-    			counterhtml = "<h3>" + shotstogo + " shots to go!</h3>";
-    			$("#counter").html(counterhtml);
-    			shotBarProgress = (1 / currentselection) * 100;
-    			$("#game-progress-bar").progress(shotBarProgress);
-    			
-    			$("#next-shot-progress-bar").progress((secToGo / 60) * 100);
-    			secondsCountdownHTML = "<h4>Next shot in " + (60 - secToGo) + " seconds.</h4>";
-    			$("#seconds-countdown-div").html(secondsCountdownHTML);
-    			
-    			(function secondsCountdown() {
-                	secondsTimeout = setTimeout(function() {
-                		if (secToGo++ <60){
-                			$("#next-shot-progress-bar").progress((secToGo / 60) * 100);
-                			secondsCountdownHTML = "<h4>Next shot in " + (60 - secToGo) + " seconds.</h4>";
-                			$("#seconds-countdown-div").html(secondsCountdownHTML);
-                		    secondsCountdown();
-                		}
-                	}, 1000);
-                })();
-	        }
-	        
-	        else if ($(this).val() != currentselection)
-	        {
-	            
-	            previousselection = Math.abs(currentselection);
-	            
-	            currentselection = $(this).val();
-	            selectionddifference = currentselection - previousselection;
-			    shotstogo = shotstogo + selectionddifference;
-			    counterhtml = "<h3>" + shotstogo + " shots to go!</h3>";
-    			$("#counter").html(counterhtml);
-			    clearTimeout(stopbutton);
-			    clearTimeout(secondsTimeout);
-			    
-			    secToGo = 1;
-			    $("#next-shot-progress-bar").progress((secToGo / 60) * 100);
-    			secondsCountdownHTML = "<h4>Next shot in " + (60 - secToGo) + " seconds.</h4>";
-    			$("#seconds-countdown-div").html(secondsCountdownHTML);
-    			
-    			(function secondsCountdown() {
-                	secondsTimeout = setTimeout(function() {
-                		if (secToGo++ <60){
-                			$("#next-shot-progress-bar").progress((secToGo / 60) * 100);
-                			secondsCountdownHTML = "<h4>Next shot in " + (60 - secToGo) + " seconds.</h4>";
-                			$("#seconds-countdown-div").html(secondsCountdownHTML);
-                		    secondsCountdown();
-                		}
-                	}, 1000);
-                })();
-			    
-	        }
-	        
-            if (currentselection == 30)
-            {
-                $("#start-button-30").addClass("disabled");
-                $("#start-button-30").prop("disabled",true);
-            }
-            else if (currentselection == 60)
-            {
-                $("#start-button-30").addClass("disabled");
-                $("#start-button-30").prop("disabled",true);
-                $("#start-button-60").addClass("disabled");
-                $("#start-button-60").prop("disabled",true);
-            }
-            else if (currentselection == 100)
-            {
-                $("#start-button-30").addClass("disabled");
-                $("#start-button-30").prop("disabled",true);
-                $("#start-button-60").addClass("disabled");
-                $("#start-button-60").prop("disabled",true);
-                $("#start-button-100").addClass("disabled");
-                $("#start-button-100").prop("disabled",true);
-            }
-            
-            $("#stop").prop("disabled",false);
-            $("#stop").removeClass("disabled");
-            
-			document.getElementById('beer-sound').play();
-			
-            $('html, body').animate({
-                scrollTop: $("#counter-section").offset().top
-             }, 500);
-
-			
-            (function countDown() {
-                
-                
-              stopbutton = setTimeout(function() {
-                  clearTimeout(secondsTimeout);
-                  secToGo = 1;
-                  $("#next-shot-progress-bar").progress((secToGo / 60) * 100);
-                if (shotstogo-- > 0) {
-                  counterhtml = "<h3>" + shotstogo + " shots to go!</h3>";
-                  $("#counter").html(counterhtml);
-                  audio.play();
-                  shotBarProgress = ((currentselection - shotstogo) / currentselection) * 100;
-                  $("#game-progress-bar").progress(shotBarProgress);
-                  
-                  (function secondsCountdown() {
-                  	secondsTimeout = setTimeout(function() {
-                  		if (secToGo++ < 60){
-                  			$("#next-shot-progress-bar").progress((secToGo / 60) * 100);
-                  			secondsCountdownHTML = "<h4>Next shot in " + (60 - secToGo) + " seconds.</h4>";
-                			$("#seconds-countdown-div").html(secondsCountdownHTML);
-                  		secondsCountdown();
-
-                  		}
-                  	}, 1000);
-                  	$("#next-shot-progress-bar").progress((secToGo / 60) * 100);
-          			secondsCountdownHTML = "<h4>Next shot in " + (60 - secToGo) + " seconds.</h4>";
-        			$("#seconds-countdown-div").html(secondsCountdownHTML);
-                  })();
-                  countDown();
-  
-                }
-              }, 60000);
-            })();
-        });
-        
-        $("#stop").click(function() {
-            $('html, body').animate({
-                scrollTop: 0
-             }, 700);
-             
-            $("#stop").prop("disabled",true);
-            $("#stop").addClass("disabled");
-			clearTimeout(stopbutton)
-			
-			stopbutton = null;
-    	    currentselection = null;
-    	    previousselection = null;
-    	    selectionddifference = null;
-    	    shotstogo = null;
-    	    counterhtml = "";
-    	    
-    	    $("#start-button-30").removeClass("disabled");
-            $("#start-button-30").prop("disabled",false);
-            $("#start-button-60").removeClass("disabled");
-            $("#start-button-60").prop("disabled",false);
-            $("#start-button-100").removeClass("disabled");
-            $("#start-button-100").prop("disabled",false);
-            $("#counter").html(counterhtml);
-            
-            secToGo = 0;
-		    $("#next-shot-progress-bar").progress((secToGo / 60) * 100);
-			secondsCountdownHTML = "<h4>Next shot in " + (60 - secToGo) + " seconds.</h4>";
-			$("#seconds-countdown-div").html(secondsCountdownHTML);
-			clearTimeout(secondsTimeout);
-            
-            
-
-        });
-		
-	</script>
 
   </body>
 </html>
