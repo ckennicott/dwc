@@ -13,43 +13,29 @@
     
   </head>
   <body>
-      <audio id="beer-sound" preload="auto">
-           <source src="beer.wav" type="audio/wav">
-      Your browser does not support this audio format.
-      </audio>
+       <div class="container-narrow">
+              <div class="masthead">
+                  <ul class="nav nav-pills pull-right">
+                      <li><a href="index.html">Power Hour</a></li>
+                      <li class="active"><a href="kingscup.html">Kings Cup</a></li>
+                  </ul>
+                  <h3 class="muted">Kings Cup</h3>
+              </div>
 
-	<div class="container">
-	    <div class="row">
-	        <div class="span7">
-                <h1 class="center-text">KINGS CUP</h1>
-                <h2 class="center-text">Grab some friends and play!</h2>
-            </div>
-            <div class="span3 button-section">
-                <button class="btn btn-success large" id="draw-card-button" type="button">Draw</button>
-                </div>
-            </div>
-        </div><!-- End Row -->
+              <hr>
 
-        <div class="rules">
-            <div class="row center-text">
-                <div class="span4">
-                    <h5>RULE 1</h5>
-                    <p>Drink one shot glass of beer every minute. You'll hear a tone when you need to shoot it!</p>
-                </div>
-                <div class="span4">
-                    <h5>RULE 2</h5>
-                    <p>No puking. If you puke. You're out. Try hard, win big.</p>
-                </div>
-                <div class="span4">
-                    <h5>RULE 3</h5>
-                    <p>If you puke you can keep playing as an "honorary" competitor.</p>
-                </div>
-            </div><!-- End Row -->
-        </div><!-- End Rules -->
+              <div class="jumbotron">
+                  <h1>Grab some friends and play!</h1>
+                  <p class="lead">Draw a card and follow the instructions.</p>
+                  <div class="pad_both_double button-section center-text">
+                      <button class="btn btn-success large" id="draw-card-button" type="button">Draw</button>
+                  </div>
+              </div>
+
         
         <div class="center-text pad_both" id="card-section">
-            <div id="card"><h4>Queen - Question Master</h4></div>
-            <div id="card-explination"><p>Whoever draws this card becomes the "Question Master". Whenever they ask you a question, you must answer their question with another question, or else not answer them at all. If you answer a question with a statement, you must take one drink. This person is the "Question Master" until someone else draws a queen.</p></div>
+            <div id="card"></div>
+            <div id="card-explination"></div>
             
         </div><!-- End center -->
 	</div>
