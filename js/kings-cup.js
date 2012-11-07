@@ -15,7 +15,16 @@ $(document).ready(function(){
 	["Queen", "Question Master", "Whoever draws this card becomes the \"Question Master\". Whenever they ask you a question, you must answer their question with another question, or else not answer them at all. If you answer a question with a statement, you must take one drink. This person is the \"Question Master\" until someone else draws a queen."],
 	["King", "RuleMaster", "The 4th King drawn must drink the center cup. The first 3 King's may add drinks to the center cups as well as make a rule."]
 	];
-	var previousCardsArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+	
+	var previousCardsArray = [
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+	];
+	
+	var suitArray = ["Hearts", "Diamonds", "Clubs", "Spades"];
+	
 	var currentCardNum;
 	var cardHTML;
 	var cardExplinationHTML;
@@ -23,21 +32,28 @@ $(document).ready(function(){
 	var cardCounter = 0;
 	var cardCounterHTML;
 	var cardThumbnailString;
+	var currentSuitNum;
 
 
     $("#draw-card-button").click(function() {
+        $("#card-thumbnail").removeClass("hidden");
 		
 		var foundCard = false;
 		while (foundCard == false) {
 			
-			// Draw a new card
-			currentCardNum = Math.floor(Math.random() * 13) + 1;
+			// Pick a card number
+			currentCardNum = Math.floor(Math.random() * 13);
+			
+			// Pick a suit
+			currentSuitNum = Math.floor(Math.random() * 4);
 		
-			// Make sure the card number hasn't been drawn 4 times before
-			if (previousCardsArray[currentCardNum - 1] < 4) {
+			// Make sure the card number hasn't been drawn before
+			if (previousCardsArray[currentSuitNum][currentCardNum] == 0) {
+				// Valid card found
+				foundCard = true;
 				
-				// Incriment the card number
-				previousCardsArray[currentCardNum - 1]++;
+				// Mark the current card used
+				previousCardsArray[currentSuitNum][currentCardNum] = 1;
 				
 				// Incriment the card counter
 				cardCounter++;
@@ -51,14 +67,13 @@ $(document).ready(function(){
 				cardCounterHTML = "<h2>" + (52 - cardCounter) + " Cards left.</h2><h2>" + (4 - kingCounter) + " Kings left.</h2>"
 				$("#card-counter").html(cardCounterHTML);
 				
-				cardHTML = "<h4>" + cardArray [currentCardNum - 1][0] + " - " + cardArray[currentCardNum - 1][1] + "</h4>";
+				cardHTML = "<h4>" + cardArray [currentCardNum][0] + " - " + cardArray[currentCardNum][1] + "</h4>";
 				$("#card-title").html(cardHTML);
 				
-				cardExplinationHTML = "<p>" + cardArray [currentCardNum - 1][2] + "</p>";
+				cardExplinationHTML = "<p>" + cardArray [currentCardNum][2] + "</p>";
 				$("#card-explination").html(cardExplinationHTML);
-				foundCard = true;
 				
-				cardThumbnailString = "img/cards/" + cardArray [currentCardNum - 1][0] + "_of_clubs.png";
+				cardThumbnailString = "img/cards/" + cardArray [currentCardNum][0] + "_of_" + suitArray[currentSuitNum] + ".png";
 				$("#card-thumbnail").attr("src", cardThumbnailString).fadeIn();
 				
 				if (isFull(previousCardsArray)) {
@@ -73,8 +88,15 @@ $(document).ready(function(){
     				cardExplinationHTML = "<p>Click draw to start a new game.</p>";
     				$("#card-explination").html(cardExplinationHTML);
 					
+					$("#card-thumbnail").addClass("hidden");
+					
 					//reset game
-					previousCardsArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+					previousCardsArray = [
+                    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+                	];
 					kingCounter = 0;
                 	cardCounter = 0;
 					
@@ -90,11 +112,13 @@ $(document).ready(function(){
 		var full = true;
 		
 		for (var i = 0; i < previousCardsArray.length; i++) {
-			
-			if (previousCardsArray[i] < 4) {
-				return false;
+			for (var j = 0; j < array[i].length; j++){
+			    
+    			if (previousCardsArray[i][j] == 0) {
+    			    
+    				return false;
+    			}			    
 			}
-			
 		}
 		
 		return full;	
