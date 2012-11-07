@@ -26,19 +26,47 @@
 
               <div class="jumbotron">
                   <h1>Grab some friends and play!</h1>
-                  <p class="lead">Draw a card and follow the instructions.</p>
-                  <div class="pad_both_double button-section center-text">
-                      <button class="btn btn-success large" id="draw-card-button" type="button">Draw</button>
-                  </div>
-              </div>
+                  <p class="lead">Who will get the Kings Cup?</p>
 
+              </div>
+              <div class="alert alert-block alert-info">
+                  <button type="button" class="close" data-dismiss="alert">Close</button>
+                  <h4>How to play</h4>
+                  <ul>
+                      <li>Place an empty cup where everyone can see it. This will be the "Kings Cup"</li>
+                      <li>Use the draw button to draw a new card.</li>
+                      <li>Follow the instructions associated with the card you drew.</li>
+                      <li>If you draw a king you can add drinks to the kings cup.</li>
+                      <li>If you draw the 4th king, you must drink the contents of the center cup.</li>
+                      </ul>
+                </div>
+        <div class="pad_both_double button-section center-text center">
+            <button class="btn btn-success btn-large" id="draw-card-button" type="button">Draw</button>
+        </div>
         
         <div class="center-text pad_both" id="card-section">
-            <div id="card"></div>
-            <div id="card-explination"></div>
+            <div class="row">
+                <div class="span3"><img id="card-thumbnail" src="" width="230"></div>
+                <div class="span4">
+                    <div id="card-counter"></div><hr>
+                    <div id="card-title"></div>
+                    <div id="card-explination"></div>
+                </div>
+            </div>
+
             
         </div><!-- End center -->
 	</div>
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36039568-1']);
+        _gaq.push(['_trackPageview']);
 
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
   </body>
 </html>

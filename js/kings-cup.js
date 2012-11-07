@@ -19,6 +19,10 @@ $(document).ready(function(){
 	var currentCardNum;
 	var cardHTML;
 	var cardExplinationHTML;
+	var kingCounter = 0;
+	var cardCounter = 0;
+	var cardCounterHTML;
+	var cardThumbnailString;
 
 
     $("#draw-card-button").click(function() {
@@ -34,17 +38,45 @@ $(document).ready(function(){
 				
 				// Incriment the card number
 				previousCardsArray[currentCardNum - 1]++;
+				
+				// Incriment the card counter
+				cardCounter++;
+				
+				// Incriment king counter if neccesary
+				if (currentCardNum == 13) {
+				    kingCounter++
+				}
 
 				// Update page content
+				cardCounterHTML = "<h2>" + (52 - cardCounter) + " Cards left.</h2><h2>" + (4 - kingCounter) + " Kings left.</h2>"
+				$("#card-counter").html(cardCounterHTML);
+				
 				cardHTML = "<h4>" + cardArray [currentCardNum - 1][0] + " - " + cardArray[currentCardNum - 1][1] + "</h4>";
-				$("#card").html(cardHTML);
+				$("#card-title").html(cardHTML);
+				
 				cardExplinationHTML = "<p>" + cardArray [currentCardNum - 1][2] + "</p>";
 				$("#card-explination").html(cardExplinationHTML);
 				foundCard = true;
 				
+				cardThumbnailString = "img/cards/" + cardArray [currentCardNum - 1][0] + "_of_clubs.png";
+				$("#card-thumbnail").attr("src", cardThumbnailString).fadeIn();
+				
 				if (isFull(previousCardsArray)) {
 					
-					alert("Game over");
+					// Update page content
+					cardCounterHTML = ""
+    				$("#card-counter").html(cardCounterHTML);
+					
+					cardHTML = "<h4>Game Over</h4>";
+    				$("#card-title").html(cardHTML);
+
+    				cardExplinationHTML = "<p>Click draw to start a new game.</p>";
+    				$("#card-explination").html(cardExplinationHTML);
+					
+					//reset game
+					previousCardsArray = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+					kingCounter = 0;
+                	cardCounter = 0;
 					
 				}
 			}
