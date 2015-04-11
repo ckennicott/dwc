@@ -1,81 +1,49 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Power Hour - Drinking Game</title>
-        <!-- Bootstrap -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/bootstrap.css" rel="stylesheet">
-        <link href="css/main.css" rel="stylesheet">
-        <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script src="js/bootstrap.js"></script>
-        <script src="js/bootstrap-progress.js"></script>
-        <script type="text/javascript" src="js/power-hour.js"></script>
-    </head>
-    <body>
-        <audio id="beer-sound" preload="auto">
-            <source src="beer.wav" type="audio/wav">
-            Your browser does not support this audio format.
-        </audio>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Drunk With Chuck | Drinking Games</title>
 
-        <div class="container-narrow">
-            <div class="masthead">
-                <ul class="nav nav-pills pull-right">
-                    <li class="active"><a href="index.html">Power Hour</a></li>
-                    <li><a href="kingscup.html">Kings Cup</a></li>
-                </ul>
-                <h3 class="muted">Power Hour</h3>
-            </div>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
 
-            <hr>
+        <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>DWC Games</h1>
+        <p>Super exciting and witty subtile about how cool DWC games are!</p>
+      </div>
+    </div>
 
-            <div class="jumbotron">
-                <h1>How many can you handle?</h1>
-                <p class="lead">Drink one shot of beer every minute. You'll hear a tone when you need to shoot it! If you puke, you're out. Try hard, win big.</p>
-                <div class="pad_both_double button-section center-text">
-                    <div class="input-prepend input-append center-text">
-                        <span class="add-on"><div class="row"><div class="span3">30 shots</div></div></span><button class="btn btn-success start-button" id="start-button-30" type="button" value="30">Go!</button>
-                    </div>
-                    <div class="input-prepend input-append center-text">
-                        <span class="add-on "><div class="row"><div class="span3">60 shots</div></div></span><button class="btn btn-warning start-button" id="start-button-60" type="button" value="60">Go!</button>
-                    </div>
-                    <div class="input-prepend input-append center-text">
-                        <span class="add-on "><div class="row"><div class="span3">100 shots</div></div></span><button class="btn btn-danger start-button" id="start-button-100" type="button" value="100">Go!</button>
-                    </div>
-                </div>
-            </div>
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Power Hour</h2>
+          <p><img src="http://placehold.it/200"></p>
+          <p><a class="btn btn-default" href="ph.html" role="button">Play</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Kings Cup</h2>
+          <p><img src="http://placehold.it/200"></p>
+          <p><a class="btn btn-default" href="#" role="button">Play</a></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Craps</h2>
+          <p><img src="http://placehold.it/200"></p>
+          <p><a class="btn btn-default" href="#" role="button">Play</a></p>
+        </div>
 
-            <div class="center-text pad_both counter-section hide">
-                <hr>
-                <h2>Power Hour Countdown:</h2>
-                <div id="seconds-countdown-div">
-                    <h4>Next shot in 0 seconds.</h4>
-                </div>
-                <div class="progress progress-warning  animated active" id="next-shot-progress-bar">
-                  <div class="bar" ></div>
-                </div>
-    
-                <div class="pad_both">
-                    <div id="counter"></div>
-                    <div class="progress animated active" id="game-progress-bar">
-                      <div class="bar" ></div>
-                    </div>
-                </div><!-- End Countdown area -->
-                <button class="btn btn-danger disabled" id="stop" type="button" disabled="ture">Stop/Reset</button>
-            </div><!-- End counter-section -->
+      </div>
 
-        </div><!-- End container -->
-
-        <script type="text/javascript">
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-36039568-1']);
-            _gaq.push(['_trackPageview']);
-
-            (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-            })();
-        </script>
-
-    </body>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
