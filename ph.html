@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Drunk With Chuck | Drinking Games</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+  </head>
+  <body>
+
+        <!-- Static navbar -->
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="">Power Hour</a></li>
+            <li><a href="kingscup.html">Kings Cup</a></li>
+            <li><a href="craps.html">Craps</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>How many can you handle?</h1>
+        <p>Drink one shot of beer every minute. You'll hear a tone when you need to shoot it! If you puke, you're out. Try hard, win big.</p>
+      </div>
+    </div>
+    <div class="container" ng-app="phr" ng-controller="timerController">
+      <div class="row">
+        <a class="btn btn-default" role="button" ng-click="start()" ng-disabled="disableStart">Start</a>
+        <a class="btn btn-default" role="button" ng-click="stop()">Stop</a>
+        <a class="btn btn-default" role="button" ng-click="reset()">Reset</a>
+      </div><!-- End row 1 -->
+
+      <div class="row">
+          <div class="col-md-6">
+              <h1> Shots Left</h1>
+                <div class="progress-radial" ng-style="shotProgressStyle">
+                  <div class="overlay">{{shotToGo}}</div>
+                </div>
+          </div> <!-- End col 1 -->
+
+          <div class="col-md-6">
+              <h1> Next Shot </h1>
+                <div class="progress-radial" ng-style="secProgressStyle">
+                  <div class="overlay">{{secToGo}}</div>
+                </div>
+          </div> <!-- End col 2-->
+        </div> <!-- End row 2 -->
+     
+
+      </div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script type="text/javascript" src="js/ngph.js"></script>
+  </body>
+</html>
