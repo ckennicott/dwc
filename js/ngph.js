@@ -72,3 +72,18 @@ phr.controller("timerController", function($sce, $scope, $timeout){
 
 });
 
+phr.directive('testCircle', function() {
+  return {
+    templateUrl: 'templates/test-circle.html'
+  };
+});
+phr.directive('shotMeter', function() {
+  return {
+    templateUrl: 'templates/shot-meter.html'
+  };
+});
+phr.directive('secMeter', function() {
+  return {
+    templateUrl: 'templates/sec-meter.html'
+  };
+});

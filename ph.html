@@ -40,22 +40,15 @@
 
       <div class="row">
           <div class="col-md-6">
-              <h1> Shots Left</h1>
-                <div class="progress-radial" ng-style="shotProgressStyle">
-                  <div class="overlay">{{shotToGo}}</div>
-                </div>
+              <div shot-meter></div>
           </div> <!-- End col 1 -->
 
           <div class="col-md-6">
-              <h1> Next Shot </h1>
-                <div class="progress-radial" ng-style="secProgressStyle">
-                  <div class="overlay">{{secToGo}}</div>
-                </div>
+              <div sec-meter></div>
           </div> <!-- End col 2-->
-        </div> <!-- End row 2 -->
-     
+      </div> <!-- End row 2 -->
 
-      </div>
+    </div>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
