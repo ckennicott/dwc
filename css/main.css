@@ -3,6 +3,25 @@ body {
   padding-bottom: 40px;
 }
 
+/* Custom container */
+.container-narrow {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+/* Main marketing message */
+.jumbotron {
+    margin: 60px 0;
+    text-align: center;
+}
+.jumbotron h1 {
+    font-size: 72px;
+    line-height: 1;
+}
+.jumbotron p {
+    font-size: 21px;
+}
+
 .wrap {
   width: 1000px
   margin: 0 auto
