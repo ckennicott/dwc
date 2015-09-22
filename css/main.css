@@ -11,28 +11,38 @@ body {
 
 /* Main marketing message */
 .jumbotron {
-    margin: 60px 0;
-    text-align: center;
+  margin: 20px 0;
+  text-align: center;
 }
 .jumbotron h1 {
-    font-size: 72px;
-    line-height: 1;
+  font-size: 45px;
+  line-height: 1;
 }
 .jumbotron p {
     font-size: 21px;
 }
 
-.wrap {
-  width: 1000px
-  margin: 0 auto
+.counter {
+  text-align: center;
 }
+.counter h1{
+  font-size: 38px;
+  line-height: 1;
+}
+
+.adsense-footer {
+  float: center;
+  text-align: center;
+  margin: 100px 0px 0px 20px
+}
+
 /* -------------------------------------
  * Bar container
  * ------------------------------------- */
 .progress-radial {
-  float: left;
-/*  margin-right: auto;
-  margin-left: auto;*/
+  float: center;
+  margin-right: auto;
+  margin-left: auto;
   position: relative;
   width: 200px;
   height: 200px;
@@ -44,32 +54,17 @@ body {
  * Optional centered circle w/text
  * ------------------------------------- */  
 .progress-radial .overlay {
-  position: absolute;
+  position: relative;
   width: 150px;
   height: 150px;
   background-color: #F0F8FF;
   border-radius: 50%;
-  margin-left: 25px;
-  margin-top: 25px;
+  margin-left: 23.3px;
+  margin-top: 23.3px;
   text-align: center;
   line-height: 150px;
   font-size: 60px;
  }
-
-.progress-0 {
-  background-image: linear-gradient(90deg, #F0F8FF 50%, transparent 50%, transparent), linear-gradient(90deg, #6495ED 50%, #F0F8FF 50%, #F0F8FF);
-}
-.progress-25 {
-  background-image: linear-gradient(90deg, #F0F8FF 50%, transparent 50%, transparent), linear-gradient(180deg, #6495ED 50%, #F0F8FF 50%, #F0F8FF);
-}
-
-.progress-50 {
-  background-image: linear-gradient(90deg, #F0F8FF 50%, transparent 50%, transparent), linear-gradient(270deg, #6495ED 50%, #F0F8FF 50%, #F0F8FF);
-}
-
-.progress-75 {
-  background-image: linear-gradient(270deg, #6495ED 50%, transparent 50%, transparent), linear-gradient(180deg, #F0F8FF 50%, transparent 50%, transparent);
-}
 
 /* Tablet
 ------------------------- */
@@ -88,14 +83,14 @@ body {
     margin-left:  -20px;
     }
   .jumbotron h1 {
-    font-size: 50px;
+    font-size: 30px;
     line-height: 1;
   }
   .jumbotron p {
     font-size: 18px;
   }
   .counter-section h2 {
-    font-size: 30px;
+    font-size: 32px;
     line-height: 1;
   }
 }
@@ -113,20 +108,42 @@ body {
     margin: 15px 0;
   }
   .jumbotron {
-      padding: 40px 20px;
-      margin-top:   -20px; /* Offset bottom margin on .navbar */
-      margin-right: -20px;
-      margin-left:  -20px;
+    padding: 40px 20px;
+    margin-top:   -20px; /* Offset bottom margin on .navbar */
+    margin-right: -20px;
+    margin-left:  -20px;
   }
   .jumbotron h1 {
-    font-size: 40px;
+    font-size: 30px;
     line-height: 1;
   }
   .jumbotron p {
     font-size: 16px;
   }
-  .counter-section h2 {
-    font-size: 28px;
+  .progress-radial {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid  #6495ED;
+    background-color: #6495ED;
+  }
+  /* -------------------------------------
+   * Optional centered circle w/text
+   * ------------------------------------- */  
+  .progress-radial .overlay {
+    width: 123px;
+    height: 123px;
+    background-color: #F0F8FF;
+    border-radius: 50%;
+    margin-left: 11.5px;
+    margin-top: 11.5px;
+    text-align: center;
+    line-height: 123px;
+    font-size: 30px;
+  }
+
+  .counter h1{
+    font-size: 30px;
     line-height: 1;
   }
 }

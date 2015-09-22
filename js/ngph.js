@@ -6,16 +6,15 @@ phr.controller("timerController", function($sce, $scope, $timeout){
   $scope.shotToGo = 60;
   $scope.timerPromise = null;
   $scope.disableStart = false;
+  $scope.hideJumbotron = false;
   $scope.shotProgressStyle = {"background-image": "linear-gradient(90deg, #F0F8FF 50%, transparent 50%, transparent), linear-gradient(90deg, #6495ED 50%, #F0F8FF 50%, #F0F8FF)"};
   $scope.secProgressStyle = {"background-image": "linear-gradient(90deg, #F0F8FF 50%, transparent 50%, transparent), linear-gradient(90deg, #6495ED 50%, #F0F8FF 50%, #F0F8FF)"};
-
+  $scope.tone = new Audio('tone.wav');
 
   $scope.countdown = function() {
     if ($scope.secToGo < 1) {
       $scope.shotToGo -= 1;
       $scope.secToGo = 61;
-
-
 
       if ((60- $scope.shotToGo) < 30) {
         nextdeg = 90 + (6 * (60 - $scope.shotToGo));
@@ -27,10 +26,8 @@ phr.controller("timerController", function($sce, $scope, $timeout){
       }
     }
 
-
-
     $scope.secToGo -= 1;
-
+    $scope.tone.play();
     if ((60- $scope.secToGo) < 30) {
         nextdeg = 90 + (6 * (60 - $scope.secToGo));
         $scope.secProgressStyle = {"background-image": "linear-gradient(90deg, #F0F8FF 50%, transparent 50%, transparent), linear-gradient(" + nextdeg + "deg, #6495ED 50%, #F0F8FF 50%, #F0F8FF)"};
@@ -52,8 +49,11 @@ phr.controller("timerController", function($sce, $scope, $timeout){
   }
 
   $scope.start = function() {
+    $scope.tone.play();
     $scope.disableStart = true;
+    $scope.hideJumbotron = true;
     $scope.timerPromise = $timeout($scope.countdown, 10);
+
   }
 
   $scope.stop = function() {
