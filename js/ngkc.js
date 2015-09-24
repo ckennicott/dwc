@@ -1,6 +1,6 @@
 var kc = angular.module("kc", []);
 
-phr.controller("timerController", function($sce, $scope, $timeout){
+phr.controller("cardController", function($sce, $scope, $timeout){
   
     var cardArray = [
 	["Ace", "Waterfall", "The Player who drew this card begins to chug or sip, so then does everybody else. When the person who picked up the card stops drinking the person to their right can stop drinking. When that person stops drinking the person to their right can stop drinking. This goes to the end of the circle. Also known as Tom Ace"],
@@ -26,5 +26,16 @@ phr.controller("timerController", function($sce, $scope, $timeout){
 	];
 	
 	var suitArray = ["Hearts", "Diamonds", "Clubs", "Spades"];
+	
+	$scope.draw = function() {
+		$scope.cardCount = 52;
+		$scope.kingCount = 4;
+	}
+
+	$scope.reset = function() {
+
+
+	}
 
 });
+
