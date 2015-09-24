@@ -13,55 +13,59 @@
     
   </head>
   <body>
-    <div class="container container-narrow">
-    <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="index.html">Home</a></li>
-            <li ><a href="ph.html">Power Hour</a></li>
-            <li class="active"><a href="kingscup.html">Kings Cup</a></li>
-          </ul>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#dwc-navbar-callapse" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse" id="dwc-navbar-callapse">
+           <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="ph.html">Power Hour</a></li>
+              <li class="active"><a href="kingscup.html">Kings Cup</a></li>
+              <!-- <li><a href="#">Boxing</a></li> -->
+            </ul>         
+          </div>
         </div>
+      </nav>
+    <div class="container container-narrow">    
+      <div class="well">
+        <h3>Game Overview</h3>
+        <p>Kings cup is a fun social drinking game. Players take turns drawing cards from a deck. Each card has an associated mini game.</p>
+        <h3>What You'll Need</h3>
+        <ul>
+          <li>Some friends</li>
+          <li>Drinks (1 for each player). Tip: A good mix of drinks (beer, cocktails, wine coolsers) makes the game more intersting.</li>
+          <li>A deck of cards or the virtual deck below</li>
+        </ul>
+        <h3>How to Play</h3>
+        <p>Click the "Draw" button below to draw a card. Follow the instructions associated with the card you drew. If you draw a king you can add drinks to the kings cup. If you draw the 4th king, you must drink the contents of the center cup.</p>
       </div>
-    </nav>
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Grab some friends and play!</h1>
-        <p>Who will get the Kings Cup?</p>
-      </div>
-    </div>
-    
-      <div class="row">
-        <button class="btn btn-success btn-lg" id="draw-card-button" type="button">Draw</button>
-        <button class="btn btn-info btn-lg" type="button" data-toggle="collapse" data-target="#instructions" aria-expanded="false" aria-controls="instructions">Instructions
-        </button>
-        <div class="collapse" id="instructions">
-          <div class="well">  
-          <h4>How to play Kings Cup</h4>
-            <ul>
-              <li>Place an empty cup where everyone can see it. This will be the "Kings Cup"</li>
-              <li>Use the draw button to draw a new card.</li>
-              <li>Follow the instructions associated with the card you drew.</li>
-              <li>If you draw a king you can add drinks to the kings cup.</li>
-              <li>If you draw the 4th king, you must drink the contents of the center cup.</li>
-            </ul>
-          </div><!-- End well -->
-        </div><!-- End colapse -->
-      </div><!-- End row 1 -->
-        
-        <div class="center-text pad_both" id="card-section">
-            <div class="row">
-                <div class="col-md-6"><img id="card-thumbnail" src="" width="230"></div>
-                <div class="col-md-6">
-                    <div id="card-counter"></div><hr>
-                    <div id="card-title"></div>
-                    <div id="card-explination"></div>
-                </div>
-            </div>            
-        </div><!-- End center -->
-        <hr>
-          
+      <div class="well">
+        <div class="row">
+          <button class="btn btn-success btn-lg" id="draw-card-button" type="button">Draw</button>
+          <div class="collapse" id="instructions">
+            <div class="well">  
+            </div><!-- End well -->
+          </div><!-- End colapse -->
+        </div><!-- End row 1 -->
+       
+          <div class="center-text pad_both" id="card-section">
+              <div class="row">
+                  <div class="col-md-6"><img id="card-thumbnail" src="" width="230"></div>
+                  <div class="col-md-6">
+                      <div id="card-counter"></div><hr>
+                      <div id="card-title"></div>
+                      <div id="card-explination"></div>
+                  </div>
+              </div>            
+          </div><!-- End center -->
+        </div>   
             <!-- DWC - Responsive -->
           <ins class="adsbygoogle"
                style="display:block"
