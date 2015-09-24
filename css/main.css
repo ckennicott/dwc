@@ -1,132 +1,251 @@
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
-  padding-top: 20px;
+  font-family: "Work sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   padding-bottom: 40px;
-  background:#53789C;
 }
 
-h1,h2,h3 {
-  color: #B20000;
+
+
+/*##########################################*/
+/*######## DIV'S & BLOCKS ##################*/
+/*##########################################*/
+
+section.hero {
+  background-image: url("../img/home/bg-temp.jpg");
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  overflow:hidden;
+  position:relative;
+  text-align:center;
+  padding:15rem 1.5rem;
+}
+@media (min-width: 768px) {
+  section.hero {
+    padding:25rem  1.5rem;
+  }
 }
 
-.footer {
+section.hero .quick-game-buttons {
+  padding: 4rem 0 0 0;
+  font-size: 19px;
+  color: #fff;
+  text-shadow:0 1px 2px rgba(0,0,0,0.4);
+}
+
+section.hero .quick-game-buttons span {
+  padding: 0 1.5rem 0 0;
+}
+
+section.hero .quick-game-buttons button {
+  background: #3498db;
+  border: 1px solid #3498db;
+  /*background: transparent;*/
+  /*border: 1px solid #fff;*/
+  padding: 1.3rem 1.5rem;
+  margin: .5rem 1.5rem;
+  font-size: 19px;
+  color: #fff;
+  text-shadow:0 1px 2px rgba(0,0,0,0.4);
+  border-radius: 4px;
+}
+section.hero .quick-game-buttons button:hover {
+  background: #369ee4;
+}
+
+section.hero h1 {
+  font-size:34px;
+  line-height:34px;
+  color:#fff;
+  text-shadow:0 1px 2px rgba(0,0,0,0.4);
+  margin-bottom:2rem
+}
+@media (min-width: 768px) {
+  section.hero h1 {
+    font-size: 56px;
+    line-height:56px;
+  }
+}
+
+section.hero p {
+  font-size:17px;
+  line-height:22px;
+  color: rgba(255,255,255,0.9);
+  text-shadow:0 1px 2px rgba(0,0,0,0.4);
+  margin-bottom:2rem
+}
+@media (min-width: 768px) {
+  section.hero p {
+    font-size: 25px;
+    line-height:32px;
+  }
+}
+
+
+
+
+
+
+
+section.games {
+  text-align:center;
+  border-top: 1px solid #e0deda;
+  background-color: #f7f5f2;
+  padding: 5rem 0;
+}
+section.games h2 {
+  font-size: 46px;
+}
+section.games p.lead {
+  font-size: 30px;
+}
+
+
+
+
+
+section.newest-promo p {
+  color: #6c6f73;
+  padding: 0;
+  margin: 2.5rem 0;
+  font-size: 15px;
+  text-align:center;
+}
+section.newest-promo p span.label {
+  font-size: 15px;
+  font-weight: 300;
+  margin: 0 1rem 0 0;
+}
+section.newest-promo p a {
+  font-size: 15px;
+  font-weight: 300;
+  margin: 0 0 0 1rem;
+}
+
+
+
+section.about {
+  padding: 5rem 0 0 0;
+}
+
+section.about h5.super-padding {
+  padding: 14rem 0 0 0;
+}
+
+section.about h2 {
+  color: #2d3238;
+  font-size: 28px;
+  margin: 0 0 2.0rem 0;
+}
+
+section.about h5 {
+  color: #bec8ce;
+  font-size: 14px;
+}
+
+section.about h6 {
+  color: #2d3238;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+section.about p {
+  color: #6c6f73;
+  font-size: 15px;
+}
+section.about p.lead {
+  color: #6c6f73;
+  font-size: 19px;
+}
+
+
+
+section.footer {
+  background-color: #2e3133;
+  color: #888;
+  padding: 3rem 0;
+}
+section.footer h4 {
+  font-size: 15px;
+  color: #fff;
+}
+section.footer p {
+  margin: 0;
+  padding: 0;
+}
+section.footer p a {
+  font-size: 14px;
+  text-decoration: none;
+  color: #888;
+}
+
+
+/*.footer {
   margin-top: 20px;
 }
 
 .footer a{
   color: #fff;
-}
-
-.navbar-default {
-  background-color: #42607D;
-  border-color: #53789C;
-}
-
-.navbar-default .navbar-text {
-  color: #fff;
-}
-.navbar-default .navbar-nav > li > a {
-  color: #fff;
-}
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-  color: #fff;
-  background-color: transparent;
-}
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-  color: #42607D;
-  background-color: #fff;
-}
-.navbar-default .navbar-nav > .disabled > a,
-.navbar-default .navbar-nav > .disabled > a:hover,
-.navbar-default .navbar-nav > .disabled > a:focus {
-  color: #ccc;
-  background-color: transparent;
-}
-.navbar-default .navbar-toggle {
-  border-color: #fff;
-}
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-  background-color: #fff;
-}
-.navbar-default .navbar-toggle .icon-bar {
-  background-color: #888;
-}
-.navbar-default .navbar-collapse,
-.navbar-default .navbar-form {
-  border-color: #e7e7e7;
-}
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
-  color: #555;
-  background-color: #e7e7e7;
-}
-
-.navbar-toggle {
-  position: relative;
-  float: right;
-  padding: 9px 10px;
-  margin-top: 8px;
-  margin-right: 15px;
-  margin-bottom: 8px;
-  background-color: #fff;
-  background-image: none;
-  border: 2px solid transparent;
-  border-radius: 4px;
-}
-
-.well {
-  min-height: 20px;
-  padding: 19px;
-  margin-bottom: 20px;
-  background-color: #f5f5f5;
-  border: 1px solid #e3e3e3;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
-          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .05);
-}
-
-/* Custom container */
-.container-narrow {
-    margin: 0 auto;
-    max-width: 960px;
-}
-
-.center {
-  text-align: center;
-}
-
-/* Main marketing message */
-.jumbotron {
-  margin: 20px 0;
-  text-align: center;
-}
-.jumbotron h1 {
-  font-size: 45px;
-  line-height: 1;
-}
-.jumbotron p {
-    font-size: 21px;
-}
-
-.counter {
-  text-align: center;
-}
-.counter h1{
-  font-size: 38px;
-  line-height: 1;
-}
+}*/
 
 .adsense-footer {
   text-align: center;
 }
 
-/* -------------------------------------
- * Bar container
- * ------------------------------------- */
+.container-narrow {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+/*##########################################*/
+/*######## NAV - MAIN ######################*/
+/*##########################################*/
+
+.nav.navbar-nav li a {
+  color: #e6e6e6;
+}
+
+
+
+
+/*##########################################*/
+/*######## HELPER CLASSES ##################*/
+/*##########################################*/
+
+.center {
+  text-align: center;
+}
+
+.upper {
+  text-transform: uppercase;
+}
+
+
+
+
+
+.counter {
+  text-align: center;
+}
+
+.counter h1{
+  font-size: 38px;
+  line-height: 1;
+}
+
+
+
+
+/*##########################################*/
+/*######## GAME STYLES #####################*/
+/*##########################################*/
+
+/* Bar container */
 .progress-radial {
   float: center;
   margin-right: auto;
@@ -138,9 +257,8 @@ h1,h2,h3 {
   border: 2px solid  #6495ED;
   background-color: #6495ED;
 }
-/* -------------------------------------
- * Optional centered circle w/text
- * ------------------------------------- */  
+
+/* Optional centered circle w/text */  
 .progress-radial .overlay {
   position: relative;
   width: 150px;
@@ -160,6 +278,18 @@ h1,h2,h3 {
 .card-description {
   /*font-size: 18px;*/
  }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Tablet
 ------------------------- */

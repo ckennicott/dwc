@@ -3,5 +3,5 @@ powerhour
 
 # Apps
 ## browser-sync
-* npm install browser-sync
+* sudo npm install -g browser-sync
 * browser-sync start --server --files css/*.css
