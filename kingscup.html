@@ -1,9 +1,7 @@
-<!DOCTYPE html>
 <html>
   <head>
     <title>Kings Cup - Drinking Game</title>
     <!-- Bootstrap -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
@@ -13,7 +11,7 @@
     
   </head>
   <body>
-    <nav class="navbar navbar-default">
+      <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#dwc-navbar-callapse" aria-expanded="false">
@@ -28,7 +26,8 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="ph.html">Power Hour</a></li>
               <li class="active"><a href="kingscup.html">Kings Cup</a></li>
-              <!-- <li><a href="#">Boxing</a></li> -->
+              <li><a href="boxing.html">Boxing</a></li>
+              <li><a href="bp.html">Beer Pong</a></li>
             </ul>         
           </div>
         </div>
@@ -49,6 +48,9 @@
       <div class="well">
         <div class="row">
           <button class="btn btn-success btn-lg" id="draw-card-button" type="button">Draw</button>
+          <div ng-app="kc" ng-controller="timerController">
+            
+          </div>
           <div class="collapse" id="instructions">
             <div class="well">  
             </div><!-- End well -->
@@ -66,6 +68,7 @@
               </div>            
           </div><!-- End center -->
         </div>   
+        <div class="adsense-footer">
             <!-- DWC - Responsive -->
           <ins class="adsbygoogle"
                style="display:block"
@@ -75,8 +78,11 @@
           <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
           </script>
+        </div>
 	</div>
-  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/ngkc.js"></script>     
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-36039568-1']);

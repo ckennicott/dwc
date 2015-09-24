@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Power Hour - Drinking Game</title>
+    <title>Beer Pong - Drinking Game</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
   </head>
@@ -18,9 +18,9 @@
           <div class="collapse navbar-collapse" id="dwc-navbar-callapse">
            <ul class="nav navbar-nav">
               <li><a href="index.html">Home</a></li>
-              <li class="active"><a href="ph.html">Power Hour</a></li>
+              <li><a href="ph.html">Power Hour</a></li>
               <li><a href="kingscup.html">Kings Cup</a></li>
-              <li><a href="boxing.html">Boxing</a></li>
+              <li class="active"><a href="boxing.html">Boxing</a></li>
               <li><a href="bp.html">Beer Pong</a></li>
             </ul>         
           </div>
@@ -32,40 +32,28 @@
       <div class="row">
         <div class="well">
           <h3>Game Overview</h3>
-          <p>Power hour is a simple yet challenging drinking game. The objective is to drink one shot of beer each minute for an hour. Make it to the end and you'll have downed 7-8 beers.</p>
+          <p>Boxing is a fun team base game. The game works best with teams of 2, but can be played with teams of 1. Boxers (drinkers) compete in 3 minute rounds until the opposing boxer pukes or quits. The cornermen (non drinking team members) help fill shot glasses during rounds and provide much needed moral support.</p>
           <h3>What You'll Need</h3>
           <ul>
-            <li>1 shot glass for each player</li>
-            <li>Lots of beer (7-8 for each player)</li>
-            <li>The power hour timer below</li>
+            <li>2 shot glasses</li>
+            <li>Alcohol of choice</li>
+            <li>2 dice (virtual dice porvided below)</li>
+            <li>A stopwatch/timer (provided below)</li>
           </ul>
           <h3>How to Play</h3>
-          <p>Fill a shot glass with beer and start the timer below. Everytime you hear a tone down another shot of beer.</p>
+          <p>The cornermen for each team fill the boxers shot glass. Each boxer takes the first shot and starts the timer, then rolls the dice. The boxer that rolls the lowest number has to drink. The cornermen quickly fill the shot glasses again and the boxers roll the dice again. This repeats for 3 minutes. After 3 minutes the boxers get a 30 second break before starting another round.</p>
         </div>
-      </div>
+      </div> 
       <div class="row">
         <div class="well">
-            <div ng-app="phr" ng-controller="timerController">   
-              <button class="btn btn-success btn-lg" role="button" ng-click="start(30)" ng-disabled="disableStart">Start</button>
-              <button class="btn btn-info btn-lg pull-right" role="button" ng-click="reset()">Reset</button>
-              <div class="row"ng-hide="hideMeters">
-                  <div class="col-md-6">
-                      <div sec-meter ></div>
-                  </div> <!-- End col 1 -->
+          <div ng-app="box">   
+            <button class="btn btn-success btn-lg" role="button" ng-click="start(30)" ng-disabled="disableStart">Roll</button>
+            <button class="btn btn-info btn-lg pull-right" role="button" ng-click="reset()">Reset</button>
 
-                  <div class="col-md-6">
-                      <div shot-meter></div>
-                  </div> <!-- End col 2-->
-
-              </div>
-              <div class="row" ng-show="showComplete">
-                <h1>You survived the power hour!</h1>
-                Click reset to play again.
-              </div>
-
-            </div>
           </div>
         </div>
+      </div>
+    
         <div class="adsense-footer">
           <!-- DWC -->
           <ins class="adsbygoogle"
@@ -74,8 +62,15 @@
             data-ad-slot="4832362869"></ins>
           <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
+        
+        <div class="footer center">
+          <p> <a href="#">Contact Us</a>  | <a href="#">Disclaimer</a> | <a href="#">Privacy Policy</a></p>
+        </div>
+        
       </div>
+      
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/ngbox.js"></script>    
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
     <script type="text/javascript" src="js/ngph.js"></script>
