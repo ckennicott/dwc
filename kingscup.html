@@ -33,49 +33,44 @@
         </div>
       </nav>
     <div class="container container-narrow">    
-    <div class="row">
-        <div class="well">
-        <h3>Game Overview</h3>
-        <p>Kings cup is a fun social drinking game. Players take turns drawing cards from a deck. Each card has an associated mini game.</p>
-        <h3>What You'll Need</h3>
-        <ul>
-          <li>Some friends</li>
-          <li>Drinks (1 for each player). Tip: A good mix of drinks (beer, cocktails, wine coolsers) makes the game more intersting.</li>
-          <li>A deck of cards or the virtual deck below</li>
-        </ul>
-        <h3>How to Play</h3>
-        <p>Click the "Draw" button below to draw a card. Follow the instructions associated with the card you drew. If you draw a king you can add drinks to the kings cup. If you draw the 4th king, you must drink the contents of the center cup.</p>
-      </div>
-    </div>
-
-      
-        <div class="row">
+      <div class="row">
           <div class="well">
-            <div ng-app="kc" ng-controller="cardController">
-
-              <button class="btn btn-success btn-lg" role="button" ng-click="draw()" ng-disabled="disableStart">Draw</button>
-              <button class="btn btn-info btn-lg pull-right" role="button" ng-click="reset()">Reset</button>          
-              <div class="center-text pad_both" id="card-section">
-                <div class="row center">
-                    <div class="col-md-6">
-                      <h3>Current Card</h3>
-                      <img src="{{cardImg}}" width="200">
-                    </div>
-                    <div class="col-md-6">
-                        <div class="row center">
-                          <h3>Card Remaining</h3>
-                          {{cardCount}}
-                          <h3>Kings Remaining</h3>
-                          {{kingCount}}
-                          <h3>{{cardTitle}}</h3>
-                          {{cardDescription}}
-                        </div>
-                    </div>            
-                </div><!-- End center -->
-              </div>
-            </div><!-- End row 1 -->
-          </div>
+          <h3>Game Overview</h3>
+          <p>Kings cup is a fun social drinking game. Players take turns drawing cards from a deck. Each card has an associated mini game.</p>
+          <h3>What You'll Need</h3>
+          <ul>
+            <li>Some friends</li>
+            <li>Drinks (1 for each player). Tip: A good mix of drinks (beer, cocktails, wine coolsers) makes the game more intersting.</li>
+            <li>A deck of cards or the virtual deck below</li>
+          </ul>
+          <h3>How to Play</h3>
+          <p>Click the "Draw" button below to draw a card. Follow the instructions associated with the card you drew. If you draw a king you can add drinks to the kings cup. If you draw the 4th king, you must drink the contents of the center cup.</p>
         </div>
+      </div>
+      
+      <div class="row"> <!-- Card Area -->
+        <div class="well">
+          <div ng-app="kc" ng-controller="cardController"> <!-- kc app -->
+
+            <button class="btn btn-success btn-lg" role="button" ng-click="draw()">Draw</button> <!-- start button -->
+            <button class="btn btn-info btn-lg pull-right" role="button" ng-click="reset()">Reset</button> <!-- reset button -->        
+              <div class="row center"> <!-- card thumbnail and counters-->
+                  <div class="col-md-6">
+                    <h3>Current Card</h3>
+                    <img src="{{cardImg}}" width="200" ng-show="hideCard">
+                  </div>
+                  <div class="col-md-6">
+                        <h3>Card Remaining</h3>
+                        <div class="card-counter">{{cardCount}}</div>
+                        <h3>Kings Remaining</h3>
+                        <div class="card-counter">{{kingCount}}</div>
+                        <h3>{{cardTitle}}</h3>
+                        <div class="card-description">{{cardDescription}}</div>
+                  </div>            
+              </div><!-- End center -->
+          </div><!-- End row 1 -->
+        </div>
+      </div>
        
 
         </div>   

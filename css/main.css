@@ -154,6 +154,13 @@ h1,h2,h3 {
   font-size: 60px;
  }
 
+ .card-counter {
+  font-size: 38px;
+ }
+.card-description {
+  /*font-size: 18px;*/
+ }
+
 /* Tablet
 ------------------------- */
 @media (max-width: 767px) {
