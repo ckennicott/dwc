@@ -307,17 +307,27 @@ section.footer p a {
   border: 1px solid transparent;
 }
 
-nav.navbar.navbar-dwc li a {
+.navbar-dwc li a {
   color: #afafaf;
   background-color: transparent;
   font-weight: 500;
   font-size: 14px;
 }
+.navbar-dwc li a:hover {
+  background-color: transparent;
+}
 
-nav.navbar.navbar-dwc a.navbar-brand p {
+.navbar-dwc a.navbar-brand p {
   color: #2e3133;
   font-size: 22px;
   letter-spacing: -1px;
+}
+
+.navbar-dwc .navbar-toggle {
+  border-color: #45494d;
+}
+.navbar-dwc .navbar-toggle .icon-bar {
+  background-color: #45494d;
 }
 
 
