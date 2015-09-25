@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Beer Pong - Drinking Game</title>
+    <title>Boxing - Drinking Game</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
   </head>
@@ -41,15 +41,40 @@
             <li>A stopwatch/timer (provided below)</li>
           </ul>
           <h3>How to Play</h3>
-          <p>The cornermen for each team fill the boxers shot glass. Each boxer takes the first shot and starts the timer, then rolls the dice. The boxer that rolls the lowest number has to drink. The cornermen quickly fill the shot glasses again and the boxers roll the dice again. This repeats for 3 minutes. After 3 minutes the boxers get a 30 second break before starting another round.</p>
+          <p>The cornermen for each team fill the boxers shot glass. Each boxer takes the first shot and starts the timer, then rolls the dice. The boxer that rolls the lowest number has to drink. The cornermen quickly fill the shot glasses again and the boxers roll the dice again. This repeats for 3 minutes. After 3 minutes the boxers get a 1 minute break before starting another round.</p>
         </div>
       </div> 
       <div class="row">
         <div class="well">
-          <div ng-app="box">   
-            <button class="btn btn-success btn-lg" role="button" ng-click="start(30)" ng-disabled="disableStart">Roll</button>
+          <div ng-app="box" ng-controller="timerController">   
+            <button class="btn btn-success btn-lg" role="button" ng-click="start()" ng-disabled="disableStart">Start</button>
+            <button class="btn btn-danger btn-lg" role="button" ng-click="stop()" ng-disabled="disableStop">Stop</button>
+            <button class="btn btn-info btn-lg" role="button" ng-click="roll()" ng-disabled="disableRoll">Roll</button>
             <button class="btn btn-info btn-lg pull-right" role="button" ng-click="reset()">Reset</button>
-
+            <div class="row center">
+              <div class="col-md-4">
+                <h3>{{timerHeading}}</h3>
+                <h4>{{minCount}}:{{secCount | numberFixedLen:2}}</h4>
+              </div>
+              <div class="col-md-4" ng-show="showIntermission">
+                <h3>Break</h3>
+                <h4>{{intSecCount}}</h4>
+              </div>
+              <div class="col-md-4">
+                <h3>Roll Results</h3>
+                <div class="row">
+                  <div class="col-md-6">
+                    <h4>Player 1</h4>
+                    <img src="img/dice/{{p1Die}}.svg" width="100" ng-show="showDice">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Player 2</h4>
+                    <img src="img/dice/{{p2Die}}.svg" width="100" ng-show="showDice">
+                  </div>
+                </div>
+                
+              </div>              
+            </div>
           </div>
         </div>
       </div>
@@ -69,11 +94,10 @@
         
       </div>
       
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script type="text/javascript" src="js/ngbox.js"></script>    
+    
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-    <script type="text/javascript" src="js/ngph.js"></script>
+    <script type="text/javascript" src="js/ngbox.js"></script>   
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script type="text/javascript">
       var _gaq = _gaq || [];
