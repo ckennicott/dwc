@@ -102,7 +102,6 @@ dwc.controller("phCtrl", function($sce, $scope, $timeout){
     }
     
 
-
   }
 
   $scope.start = function() {
