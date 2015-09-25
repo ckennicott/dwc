@@ -4,10 +4,13 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
   </head>
-  <body>
-    <div ng-app="phr">
-      
-    <div navbar></div>
+  <body ng-app="phr">
+
+
+      <!-- Navbar -->
+      <div ng-include='"templates/navbar.html"'></div>
+
+
     <div class="container container-narrow">
         <!-- Static navbar -->
 
@@ -49,13 +52,20 @@
           </div><!-- .well -->
         </div><!-- .row -->
     </div><!-- .container --> 
-    <div footer></div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+
+
+    <!-- Footer -->
+    <div ng-include='"templates/footer.html"'></div>
+
+
+    <!-- Javascripts -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-    <script type="text/javascript" src="js/ngph.js"></script>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
-    </div>
+    <!-- Custom Javascripts -->
+    <script type="text/javascript" src="js/ngph.js"></script>
+
   </body>
 </html>
