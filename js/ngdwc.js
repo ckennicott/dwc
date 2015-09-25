@@ -1,6 +1,6 @@
 var dwc = angular.module("dwc", []);
 
-dwc.directive('navBar', function() {
+dwc.directive('navbar', function() {
   return {
     templateUrl: 'templates/navbar.html'
   };

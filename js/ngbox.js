@@ -100,4 +100,14 @@ box.filter('numberFixedLen', function () {
       return num;
   };
 });
+box.directive('navbar', function() {
+  return {
+    templateUrl: 'templates/navbar.html'
+  };
+});
+box.directive('footer', function() {
+  return {
+    templateUrl: 'templates/footer.html'
+  };
+});
 

@@ -100,4 +100,14 @@ kc.controller("cardController", function($sce, $scope, $timeout){
 	}
 
 });
+kc.directive('navbar', function() {
+  return {
+    templateUrl: 'templates/navbar.html'
+  };
+});
+kc.directive('footer', function() {
+  return {
+    templateUrl: 'templates/footer.html'
+  };
+});
 

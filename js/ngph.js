@@ -99,3 +99,13 @@ phr.directive('secMeter', function() {
     templateUrl: 'templates/sec-meter.html'
   };
 });
+phr.directive('navbar', function() {
+  return {
+    templateUrl: 'templates/navbar.html'
+  };
+});
+phr.directive('footer', function() {
+  return {
+    templateUrl: 'templates/footer.html'
+  };
+});
