@@ -16,6 +16,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: #2d3238;
+  color: #45494d;
 }
 
 
@@ -43,8 +44,9 @@ h2 {
 }
 
 h3 {
-  font-size:20px;
-  line-height:20px;
+  font-size:22px;
+  line-height:22px;
+  margin: 20px 0;
 }
 @media (min-width: 768px) {
   h3 {
@@ -80,19 +82,18 @@ p {
 
 p.lead {
   font-size:18px;
-  line-height:18px;
-  color:#333;
+  line-height:22px;
+  color:#acabaa;
 }
 @media (min-width: 768px) {
   p.lead {
     font-size: 30px;
-    line-height:30px;
+    line-height:40px;
   }
 }
 
 p.large {
   font-size:18px;
-  color:#6c6f73;
 }
 @media (min-width: 768px) {
   p.large {
@@ -101,7 +102,7 @@ p.large {
 }
 
 p.description {
-  font-size: 12px;
+  font-size: 13px;
   color: #bec8ce;
 }
 @media (min-width: 768px) {
@@ -192,7 +193,6 @@ section.intro .quick-game-buttons button:hover {
   }
 }
 
-
 section.intro h1 {
   font-size:34px;
   line-height:34px;
@@ -225,6 +225,24 @@ section.intro p {
 
 
 
+section.newest-promo p {
+  line-height: 26px;
+  padding: 0;
+  margin: 2.5rem 0;
+  text-align:center;
+}
+section.newest-promo p span.label {
+  font-size: 15px;
+  font-weight: 300;
+  margin: 0 1rem 0 0;
+}
+section.newest-promo p a {
+  font-size: 15px;
+  letter-spacing: 0px;
+  font-weight: 300;
+  margin: 0 0 0 1rem;
+}
+
 
 
 
@@ -237,28 +255,12 @@ section.games {
 
 
 
-
-section.newest-promo p {
-  padding: 0;
-  margin: 2.5rem 0;
-  font-size: 15px;
-  text-align:center;
-}
-section.newest-promo p span.label {
-  font-size: 15px;
-  font-weight: 300;
-  margin: 0 1rem 0 0;
-}
-section.newest-promo p a {
-  font-size: 15px;
-  font-weight: 300;
-  margin: 0 0 0 1rem;
-}
-
-
-
 section.about {
-  padding: 5rem 0 0 0;
+  padding: 3em 1.5em 0 1.5em;
+}
+
+section.about p.description {
+  padding: 0;
 }
 
 
@@ -332,6 +334,12 @@ nav.navbar.navbar-dwc a.navbar-brand p {
 .upper {
   text-transform: uppercase;
 }
+
+.text-muted {
+  color:#6c6f73;
+}
+
+
 
 .pad-left {
   padding: 0 0 0 1em;
