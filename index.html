@@ -22,7 +22,6 @@
     <![endif]-->
 
     <!-- js -->
-    
     <script src="js/bootstrap.js"></script>
 
 
@@ -33,99 +32,8 @@
       <!-- Navbar -->
       <div ng-include='"templates/navbar.html"'></div>
 
-
-
-      <section class="intro">
-        <div class="container">
-          <h1>Drunk With Chuck. Online.</h1>
-          <p>Booze. Internet. Games. It doesn't get more fun than that. The best place to for drinking games and drinking game rules. Period.</p>
-          <div class="quick-game-buttons">
-            <span class="upper">Game of the week (more below):</span>
-            <button class="upper"><span class="fa fa-clock-o"></span> Power Hour (difficulty 7/10)</button>
-          </div>
-        </div>
-      </section>
-
-
-
-
-      <section class="newest-promo section-white">
-        <div class="container">
-          <p><span class="label label-success">Newest drinking game</span> Boxing (coming soon) <a href="#">check out the blog post</a></p>
-        </div>
-      </section> 
-
-
-
-
-      <section class="games section-tan">
-        <div class="container">
-          <h2>Awesome Drinking Games Currently Available</h2>
-          <p class="lead">Turn that borning night &amp; party into a rocking good time</p>
-          <div class="row">
-            <div class="col-xs-6 col-md-3">
-              <a href="#" class="thumbnail">
-                <img src="http://placehold.it/400x300">
-              </a>
-            </div><!-- .col -->
-            <div class="col-xs-6 col-md-3">
-              <a href="#" class="thumbnail">
-                <img src="http://placehold.it/400x300">
-              </a>
-            </div><!-- .col -->
-            <div class="col-xs-6 col-md-3">
-              <a href="#" class="thumbnail">
-                <img src="http://placehold.it/400x300">
-              </a>
-            </div><!-- .col -->
-            <div class="col-xs-6 col-md-3">
-              <a href="#" class="thumbnail">
-                <img src="http://placehold.it/400x300">
-              </a>
-            </div><!-- .col -->
-            <div class="col-xs-6 col-md-3">
-              <a href="#" class="thumbnail">
-                <img src="http://placehold.it/400x300">
-              </a>
-            </div><!-- .col -->
-            <div class="col-xs-6 col-md-3">
-              <a href="#" class="thumbnail">
-                <img src="http://placehold.it/400x300">
-              </a>
-            </div><!-- .col -->
-          </div><!-- .row -->
-        </div><!-- .container -->
-      </section>
-
-
-
-
-      <section class="about section-white">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-5 col-lg-offset-1 hidden-xs hidden-sm">
-              <img class="phone" src="img/home/phone-1.jpg">
-            </div><!-- .col -->
-            <div class="col-md-5">
-              <p class="upper description">About d.w.c.</p>
-              <h3>Drunk With Chuck isn't just about getting drunk</h3>
-              <p class="large text-muted">Games like Kings Cup and Power Hour aren't just a great way to get inebriated. For Chuck they've been a way to connect with friends, laugh a lot, something enlightened here. Great text!</p>
-              <div class="row">
-                <div class="col-sm-6">
-                  <h5 class="dark">Kings Cup</h5>
-                  <p class="text-muted">The first game Chuck ever played. Fond memories were made</p>
-                </div><!-- .col -->
-                <div class="col-sm-6">
-                  <h5 class="dark">Power Hour</h5>
-                  <p class="text-muted">Chuck's favorite game. One of the most simple, fun, and challenging games you'll play.</p>
-                </div><!-- .col -->
-              </div><!-- .row -->
-            </div><!-- .col -->
-          </div><!-- .row -->
-        </div><!-- .container -->
-      </section>
-
-
+      <!-- Page Content -->
+      <div ng-view></div> 
 
       <!-- Footer -->
       <div ng-include='"templates/footer.html"'></div>
@@ -135,6 +43,7 @@
       <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
       <script src="http://code.jquery.com/jquery-latest.js"></script>
       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+      <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-route.js"></script>
       <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
       <!-- Custom Javascripts -->
