@@ -9,4 +9,5 @@ powerhour
 # Templates
 * navbar
 * footer
-* adsense
+
+# Partials
