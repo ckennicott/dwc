@@ -4,10 +4,9 @@
   <!-- Gamer Header -->
   <div ng-include='"templates/game-header.html"'></div>
 
-
+  <hr>
 
   <div class="row">
-    <div class="well">  
       <button class="btn btn-success btn-lg" role="button" ng-click="start(30)" ng-disabled="disableStart">Start</button>
       <button class="btn btn-info btn-lg pull-right" role="button" ng-click="reset()">Reset</button>
       <div class="row"ng-hide="hideMeters">
@@ -24,12 +23,13 @@
         <h1>You survived the power hour!</h1>
         Click reset to play again.
       </div>
-    </div><!-- .well -->
   </div><!-- .row -->
 
 
+  <hr>
+
+
   <div class="row">
-    <div class="well">
       <h3>Game Overview</h3>
       <p>Power hour is a simple yet challenging drinking game. The objective is to drink one shot of beer each minute for an hour. Make it to the end and you'll have downed 7-8 beers.</p>
       <h3>What You'll Need</h3>
@@ -40,6 +40,5 @@
       </ul>
       <h3>How to Play</h3>
       <p>Fill a shot glass with beer and start the timer below. Everytime you hear a tone down another shot of beer.</p>
-    </div> <!-- .well -->
   </div> <!-- .row -->
 </div><!-- .container --> 
