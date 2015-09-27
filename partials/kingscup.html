@@ -1,21 +1,13 @@
 <div class="container container-narrow">    
-  <div class="row">
-      <div class="well">
-      <h3>Game Overview</h3>
-      <p>Kings cup is a fun social drinking game. Players take turns drawing cards from a deck. Each card has an associated mini game.</p>
-      <h3>What You'll Need</h3>
-      <ul>
-        <li>Some friends</li>
-        <li>Drinks (1 for each player). Tip: A good mix of drinks (beer, cocktails, wine coolsers) makes the game more intersting.</li>
-        <li>A deck of cards or the virtual deck below</li>
-      </ul>
-      <h3>How to Play</h3>
-      <p>Click the "Draw" button below to draw a card. Follow the instructions associated with the card you drew. If you draw a king you can add drinks to the kings cup. If you draw the 4th king, you must drink the contents of the center cup.</p>
-    </div>
-  </div>
+
+  <!-- Gamer Header -->
+  <div ng-include='"templates/game-header.html"'></div>
+
+
+  <hr>
+
   
   <div class="row"> <!-- Card Area -->
-    <div class="well">
       <button class="btn btn-success btn-lg" role="button" ng-click="draw()">Draw</button> <!-- start button -->
       <button class="btn btn-info btn-lg pull-right" role="button" ng-click="reset()">Reset</button> <!-- reset button -->        
       <div class="row center"> <!-- card thumbnail and counters-->
@@ -32,6 +24,24 @@
           <div class="card-description">{{cardDescription}}</div>
         </div>            
       </div><!-- End center -->
-    </div>
-  </div>         
+  </div><!-- .row -->
+
+
+  <hr>
+
+
+  <div class="row">
+      <h3>Game Overview</h3>
+      <p>Kings cup is a fun social drinking game. Players take turns drawing cards from a deck. Each card has an associated mini game.</p>
+      <h3>What You'll Need</h3>
+      <ul>
+        <li>Some friends</li>
+        <li>Drinks (1 for each player). Tip: A good mix of drinks (beer, cocktails, wine coolsers) makes the game more intersting.</li>
+        <li>A deck of cards or the virtual deck below</li>
+      </ul>
+      <h3>How to Play</h3>
+      <p>Click the "Draw" button below to draw a card. Follow the instructions associated with the card you drew. If you draw a king you can add drinks to the kings cup. If you draw the 4th king, you must drink the contents of the center cup.</p>
+  </div><!-- .row -->
+
+
 </div> <!-- .container -->
