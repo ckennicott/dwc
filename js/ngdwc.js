@@ -219,7 +219,7 @@ dwc.controller("kcCtrl", function($sce, $scope, $timeout){
 					
 					$scope.cardDescription = $scope.cardArray [$scope.currentCardNum][2];
 					
-					$scope.cardImg = "img/cards/" + $scope.cardArray [$scope.currentCardNum][0] + "_of_" + $scope.suitArray[$scope.currentSuitNum] + ".png";			
+					$scope.cardImg = "img/cards/" + $scope.cardArray [$scope.currentCardNum][0].toString().toLowerCase() + $scope.suitArray[$scope.currentSuitNum].toString().toLowerCase() + ".svg";			
 					if ($scope.cardCount == 0) {
 						
 						// Trigger popover with play again button
