@@ -133,6 +133,13 @@ dwc.controller("phCtrl", function($sce, $scope, $timeout){
     $scope.secProgressStyle = {"background-image": "linear-gradient(90deg, #F0F8FF 50%, transparent 50%, transparent), linear-gradient(90deg, #6495ED 50%, #F0F8FF 50%, #F0F8FF)"};
   }
 
+  // Cleanup timer promise
+  $scope.$on("$destroy", function() {
+    if ($scope.timerPromise) {
+      $timeout.cancel($scope.timerPromise);
+    };
+  });
+
 });
 
 
@@ -328,6 +335,13 @@ dwc.controller("boxCtrl", function($sce, $scope, $timeout){
   	$scope.p1Die = Math.floor(Math.random() * (7 - 1) + 1);
   	$scope.p2Die = Math.floor(Math.random() * (7 - 1) + 1);
   }
+
+  // Cleanup timer promise
+  $scope.$on("$destroy", function() {
+    if ($scope.timerPromise) {
+      $timeout.cancel($scope.timerPromise);
+    };
+  });
 
 });
 
