@@ -6,25 +6,25 @@
 
   <hr>
 
-  
   <div class="row"> <!-- Card Area -->
-      <button class="btn btn-success btn-lg" role="button" ng-click="draw()">Draw</button> <!-- start button -->
-      <button class="btn btn-info btn-lg pull-right" role="button" ng-click="reset()">Reset</button> <!-- reset button -->        
-      <div class="row center"> <!-- card thumbnail and counters-->
-        <div class="col-md-6">
-          <h3>Current Card</h3>
-          <img src="{{cardImg}}" width="200" ng-show="hideCard">
-        </div>
-        <div class="col-md-6">
-          <h3>Card Remaining</h3>
-          <div class="card-counter">{{cardCount}}</div>
-          <h3>Kings Remaining</h3>
-          <div class="card-counter">{{kingCount}}</div>
-          <h3>{{cardTitle}}</h3>
-          <div >{{cardDescription}}</div>
-        </div>            
-      </div><!-- End center -->
+    <button class="btn btn-success btn-lg" role="button" ng-click="draw()">Draw</button> <!-- start button -->
+    <button class="btn btn-info btn-lg pull-right" role="button" ng-click="reset()">Reset</button> <!-- reset button -->        
+    <div class="row center"> <!-- card thumbnail and counters-->
+      <div class="col-md-6">
+        <h3>Current Card</h3>
+        <img src="{{cardImg}}" width="200" ng-show="hideCard">
+      </div>
+      <div class="col-md-6">
+        <h3>Card Remaining</h3>
+        <div class="card-counter">{{cardCount}}</div>
+        <h3>Kings Remaining</h3>
+        <div class="card-counter">{{kingCount}}</div>
+        <h3>{{cardTitle}}</h3>
+        <div >{{cardDescription}}</div>
+      </div>            
+    </div><!-- End center -->
   </div><!-- .row -->
+
 
 
   <hr>
