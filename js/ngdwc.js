@@ -18,7 +18,9 @@ dwc.config(['$routeProvider', function ($routeProvider) {
     // Kings Cup
     .when("/kingscup", {templateUrl: "partials/kingscup.html", controller: "kcCtrl"})
     // Boxing
-    .when("/boxing", {templateUrl: "partials/boxing.html", controller: "boxCtrl"})         
+    .when("/boxing", {templateUrl: "partials/boxing.html", controller: "boxCtrl"})    
+    // Privacy Policy
+    .when("/privacy", {templateUrl: "partials/privacy.html", controller: "PageCtrl"})          
     // else 404
     .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
 }]);
