@@ -18,7 +18,9 @@ dwc.config(['$routeProvider', function ($routeProvider) {
     // Kings Cup
     .when("/kingscup", {templateUrl: "partials/kingscup.html", controller: "kcCtrl"})
     // Boxing
-    .when("/boxing", {templateUrl: "partials/boxing.html", controller: "boxCtrl"})         
+    .when("/boxing", {templateUrl: "partials/boxing.html", controller: "boxCtrl"})    
+    // Privacy Policy
+    .when("/privacy", {templateUrl: "partials/privacy.html", controller: "PageCtrl"})          
     // else 404
     .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
 }]);
@@ -133,6 +135,13 @@ dwc.controller("phCtrl", function($sce, $scope, $timeout){
     $scope.secProgressStyle = {"background-image": "linear-gradient(90deg, #F0F8FF 50%, transparent 50%, transparent), linear-gradient(90deg, #6495ED 50%, #F0F8FF 50%, #F0F8FF)"};
   }
 
+  // Cleanup timer promise
+  $scope.$on("$destroy", function() {
+    if ($scope.timerPromise) {
+      $timeout.cancel($scope.timerPromise);
+    };
+  });
+
 });
 
 
@@ -212,7 +221,7 @@ dwc.controller("kcCtrl", function($sce, $scope, $timeout){
 					
 					$scope.cardDescription = $scope.cardArray [$scope.currentCardNum][2];
 					
-					$scope.cardImg = "img/cards/" + $scope.cardArray [$scope.currentCardNum][0] + "_of_" + $scope.suitArray[$scope.currentSuitNum] + ".png";			
+					$scope.cardImg = "img/cards/" + $scope.cardArray [$scope.currentCardNum][0].toString().toLowerCase() + $scope.suitArray[$scope.currentSuitNum].toString().toLowerCase() + ".svg";			
 					if ($scope.cardCount == 0) {
 						
 						// Trigger popover with play again button
@@ -328,6 +337,13 @@ dwc.controller("boxCtrl", function($sce, $scope, $timeout){
   	$scope.p1Die = Math.floor(Math.random() * (7 - 1) + 1);
   	$scope.p2Die = Math.floor(Math.random() * (7 - 1) + 1);
   }
+
+  // Cleanup timer promise
+  $scope.$on("$destroy", function() {
+    if ($scope.timerPromise) {
+      $timeout.cancel($scope.timerPromise);
+    };
+  });
 
 });
 

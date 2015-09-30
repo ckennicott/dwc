@@ -141,7 +141,7 @@ section.section-grey {
 
 
 section.intro {
-  background-image: url("../img/home/bg-temp.jpg");
+  background-image: url("../img/home/bg-temp-2.jpg");
   background-position:center center;
   background-repeat:no-repeat;
   background-size:cover;
@@ -283,15 +283,10 @@ section.footer p a {
 }
 
 
-/*.footer {
-  margin-top: 20px;
-}
 
-.footer a{
-  color: #fff;
-}*/
 
 .adsense-footer {
+  padding-top: 20px;
   text-align: center;
 }
 
@@ -442,9 +437,6 @@ section.footer p a {
 
  .card-counter {
   font-size: 38px;
- }
-.card-description {
-  /*font-size: 18px;*/
  }
 
 
