@@ -20,7 +20,9 @@ dwc.config(['$routeProvider', function ($routeProvider) {
     // Boxing
     .when("/boxing", {templateUrl: "partials/boxing.html", controller: "boxCtrl"})    
     // Privacy Policy
-    .when("/privacy", {templateUrl: "partials/privacy.html", controller: "PageCtrl"})          
+    .when("/privacy", {templateUrl: "partials/privacy.html", controller: "PageCtrl"})  
+    // About
+    .when("/about", {templateUrl: "partials/about.html", controller: "PageCtrl"})               
     // else 404
     .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
 }]);
