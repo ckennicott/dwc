@@ -1,6 +1,15 @@
 var dwc = angular.module("dwc", [
-	'ngRoute'
+	'ngRoute',
+  'angularytics'
 ]);
+
+dwc.config(function(AngularyticsProvider) {
+  AngularyticsProvider.setEventHandlers(['Console', 'GoogleUniversal']);
+  })
+  .run(function(Angularytics) {
+    Angularytics.init();
+});
+
 
 /**
  * Routes
@@ -369,9 +378,7 @@ dwc.filter('numberFixedLen', function () {
   };
 });
 
-angular.module('sample-app', ['angularytics'])
-  .config(function(AngularyticsProvider) {
-    AngularyticsProvider.setEventHandlers(['Console', 'GoogleUniversal']);
-  }).run(function(Angularytics) {
-    Angularytics.init();
-  });
+
+
+
+
