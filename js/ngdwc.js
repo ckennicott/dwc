@@ -368,3 +368,10 @@ dwc.filter('numberFixedLen', function () {
       return num;
   };
 });
+
+angular.module('sample-app', ['angularytics'])
+  .config(function(AngularyticsProvider) {
+    AngularyticsProvider.setEventHandlers(['Console', 'GoogleUniversal']);
+  }).run(function(Angularytics) {
+    Angularytics.init();
+  });
