@@ -8,7 +8,7 @@
 
   <div class="row">
       <button class="btn btn-success btn-lg" role="button" ng-click="start(30) | trackEvent:'Power Hour':'Start button clicked'" ng-disabled="disableStart">Start</button>
-      <button class="btn btn-info btn-lg pull-right" role="button" ng-click="reset()">Reset</button>
+      <button class="btn btn-info btn-lg pull-right" role="button" ng-click="reset() | trackEvent:'Power Hour':'Reset button clicked'">Reset</button>
       <div class="row"ng-hide="hideMeters">
           <div class="col-md-6">
               <div sec-meter ></div>
