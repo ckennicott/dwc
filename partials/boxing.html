@@ -7,10 +7,10 @@
   <hr>
 
   <div class="row">
-        <button class="btn btn-success btn-lg" role="button" ng-click="start()" ng-disabled="disableStart">Start</button>
-        <button class="btn btn-danger btn-lg" role="button" ng-click="stop()" ng-disabled="disableStop">Stop</button>
-        <button class="btn btn-info btn-lg" role="button" ng-click="roll()" ng-disabled="disableRoll">Roll</button>
-        <button class="btn btn-info btn-lg pull-right" role="button" ng-click="reset()">Reset</button>
+        <button class="btn btn-success btn-lg" role="button" ng-click="start() | trackEvent:'Boxing':'Start button clicked'" ng-disabled="disableStart">Start</button>
+        <button class="btn btn-danger btn-lg" role="button" ng-click="stop() | trackEvent:'Boxing':'Stop button clicked'" ng-disabled="disableStop">Stop</button>
+        <button class="btn btn-info btn-lg" role="button" ng-click="roll() | trackEvent:'Boxing':'Roll button clicked'" ng-disabled="disableRoll">Roll</button>
+        <button class="btn btn-info btn-lg pull-right" role="button" ng-click="reset() | trackEvent:'Boxing':'Reset button clicked'">Reset</button>
         <div class="row center">
           <div class="col-md-4">
             <h3>{{timerHeading}}</h3>
