@@ -288,6 +288,12 @@ section.footer p a {
 }
 
 
+@media (min-width: 1200px) {
+  .container-game {
+    width: 940px;
+  }
+}
+
 
 
 .adsense-footer {
