@@ -308,10 +308,18 @@ section.footer p a {
 
 .navbar {
   position: relative;
-  min-height: 50px;
+  min-height: 60px;
   margin-bottom: 14px;
   margin-top: 14px;
   border: 1px solid transparent;
+}
+
+.navbar-brand {
+  float: left;
+  height: 60px;
+  padding: 0px 15px 0px 15px;
+  font-size: 18px;
+  line-height: 20px;
 }
 
 .navbar-dwc li a {
@@ -319,6 +327,8 @@ section.footer p a {
   background-color: transparent;
   font-weight: 500;
   font-size: 14px;
+  line-height: 20px;
+  padding: 20px 15px 20px 15px;
 }
 .navbar-dwc li a:hover {
   background-color: transparent;
@@ -328,6 +338,10 @@ section.footer p a {
   color: #2e3133;
   font-size: 22px;
   letter-spacing: -1px;
+}
+
+.navbar-dwc a.navbar-brand img {
+  height: 60px;
 }
 
 .navbar-dwc .navbar-toggle {
