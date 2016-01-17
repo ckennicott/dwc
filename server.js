@@ -7,7 +7,7 @@ app.use(require('prerender-node').set('prerenderServiceUrl', 'http://localhost:3
 app.use(express.static("."));
 
 app.get('*', function(req, res){ 
-  res.sendfile('./index.html'); 
+  res.sendFile('./index.html'); 
 });
 
 app.listen(8081); 
