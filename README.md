@@ -1,10 +1,19 @@
 DWC
 =========
 
+# Deploying
+
+* Merge dev branch into master
+* Check analytics ID in index.html
+* Check express port in server.js (8081 for prod, 8082 for dev)
+
 # Apps
-## browser-sync
+## Express
 
-Required for displaying partials/templates
+Required for displaying partials/templates and passing search bots to prerender
 
-* sudo npm install -g browser-sync
-* browser-sync start --server --files css/*.css
+## Prerender
+
+Required for search indexing of Angular content
+
+# Nginx Configuration
