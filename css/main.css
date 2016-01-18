@@ -287,6 +287,9 @@ section.footer p a {
   color: #888;
 }
 
+.container-game {
+  padding-bottom: 15px;
+}
 
 @media (min-width: 1200px) {
   .container-game {
