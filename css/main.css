@@ -320,7 +320,7 @@ section.footer p a {
 .navbar-brand {
   float: left;
   height: 60px;
-  padding: 0px 15px 0px 15px;
+  padding: 0px 15px 0px 7vw;
   font-size: 18px;
   line-height: 20px;
 }
