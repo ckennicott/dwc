@@ -23,23 +23,31 @@ dwc.config(function ($locationProvider) {
 dwc.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
   	// Home
-    .when("/", {templateUrl: "partials/home.html", controller: "PageCtrl"})
+    .when("/", {title: "Drunk With Chuck", templateUrl: "partials/home.html", controller: "PageCtrl"})
     // Disclaimer
-    .when("/disclaimer", {templateUrl: "partials/disclaimer.html", controller: "PageCtrl"})
+    .when("/disclaimer", {title: "Disclaimer - Drunk With Chuck", templateUrl: "partials/disclaimer.html", controller: "PageCtrl"})
     // Beer Pong
-    .when("/beerpong", {templateUrl: "partials/beerpong.html", controller: "PageCtrl"})
+    .when("/beerpong", {title: "Beer Poing - Drunk With Chuck", templateUrl: "partials/beerpong.html", controller: "PageCtrl"})
     // Power Hour
-    .when("/powerhour", {templateUrl: "partials/powerhour.html", controller: "phCtrl"})
+    .when("/powerhour", {title: "Power Hour Timer - Drunk With Chuck", templateUrl: "partials/powerhour.html", controller: "phCtrl"})
     // Kings Cup
-    .when("/kingscup", {templateUrl: "partials/kingscup.html", controller: "kcCtrl"})
+    .when("/kingscup", {title: "Kings Cup - Drunk With Chuck", templateUrl: "partials/kingscup.html", controller: "kcCtrl"})
     // Boxing
-    .when("/boxing", {templateUrl: "partials/boxing.html", controller: "boxCtrl"})    
+    .when("/boxing", {title: "Boxing - Drunk With Chuck", templateUrl: "partials/boxing.html", controller: "boxCtrl"})    
     // Privacy Policy
-    .when("/privacy", {templateUrl: "partials/privacy.html", controller: "PageCtrl"})          
+    .when("/privacy", {title: "Privacy Policy - Drunk With Chuck", templateUrl: "partials/privacy.html", controller: "PageCtrl"})
+    // Flip Cup
+    .when("/flipcup", {title: "Flip Cup - Drunk With Chuck", templateUrl: "partials/flipcup.html", controller: "PageCtrl"})           
     // 404
-    .when("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"})            
+    .when("/404", {title: "Page Not Found - Drunk With Chuck", templateUrl: "partials/404.html", controller: "PageCtrl"})            
     // else 404
-    .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"});
+    .otherwise("/404", {title: "Page Not Found - Drunk With Chuck", templateUrl: "partials/404.html", controller: "PageCtrl"});
+}]);
+
+dwc.run(['$rootScope', function($rootScope) {
+    $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+        $rootScope.title = current.$$route.title;
+    });
 }]);
 
 
@@ -59,10 +67,18 @@ dwc.directive('secMeter', function() {
 });
 
 /**
+ * Services
+ */
+
+
+
+
+
+
+/**
  * Controls all other Pages
  */
-dwc.controller('PageCtrl', function (/* $scope, $location, $http */) {
-  console.log("Page Controller reporting for duty.");
+dwc.controller('PageCtrl', function ($scope) {
 
 
 });
