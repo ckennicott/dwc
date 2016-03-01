@@ -1,12 +1,23 @@
 <div class="container container-narrow container-game">    
 
-  <!-- Gamer Header -->
-  <div ng-include='"templates/game-header.html"'></div>
+  <div class="row">
 
+    <div class="col col-md-9">
+      <h1>Kings Cup</h1>
+      <p>Last updated February 2016</p>
+    </div> <!-- .col -->
 
-  <hr>
+    <div class="col col-md-3">
+      <span class="pull-right">
+        <p>Players: Unlimited</p>
+        <p>Time: 30 - 60m</p>
+        <p>Dificulty: Moderate</p>            
+      </span>
+    </div> <!-- .col -->
 
-  <div class="row"> <!-- Card Area -->
+  </div> <!-- .row -->
+
+  <div class="row" style="background-color: #f7f5f2;"> <!-- Card Area -->
     <button class="btn btn-success btn-lg" role="button" ng-click="draw() | trackEvent:'Kings Cup':'Draw button clicked'">Draw</button> <!-- start button -->
     <button class="btn btn-info btn-lg pull-right" role="button" ng-click="reset() | trackEvent:'Kings Cup':'Reset button clicked'">Reset</button> <!-- reset button -->        
     <div class="row center"> <!-- card thumbnail and counters-->
@@ -29,72 +40,48 @@
 
   <hr>
 
+  <div class="row">
+    <h2>Kings Cup</h2>
+    <p>Kings cup is a fun social drinking game. Players take turns drawing cards from a deck. Each card has an associated mini game.</p>  
+  </div>
+
+  <hr>
 
   <div class="row">
 
-    <h5><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Unlimited </h5> 
-    <h5><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 30-60m </h5> 
-    <h5><span class="glyphicon glyphicon-glass" aria-hidden="true"></span> Moderate </h5> 
+    <div class="col col-md-3">
+      <h3>Supplies</h3>
+      <p>Drinks (1 for each player)</p>
+      <p>1 deck of cards or the virtual deck above</p>
+      <p>1 cup</p>
+        
+    </div> <!-- .col -->
 
-      <h3>Game Overview</h3>
-      <p>Kings cup is a fun social drinking game. Players take turns drawing cards from a deck. Each card has an associated mini game.</p>
-      <h3>What You'll Need</h3>
-      <ul>
-        <li>Some friends</li>
-        <li>Drinks (1 for each player). Tip: A good mix of drinks (beer, cocktails, wine coolsers) makes the game more intersting.</li>
-        <li>A deck of cards or the virtual deck above</li>
-      </ul>
+    <div class="col-md-9">
       <h3>How to Play</h3>
-      <p>Click the "Draw" button above to draw a card. Follow the instructions associated with the card you drew. If you draw a king you can add drinks to the kings cup. If you draw the 4th king, you must drink the contents of the center cup.</p>
-  </div><!-- .row -->
+      <p>Click the "Draw" button above to draw a card. Follow the instructions associated with the card drawn. For a list of card rules seel the Standar Card Rules section below.</p>    
+    </div>
 
+  </div> <!-- .row -->
 
   <hr>
 
 
   <div class="row">
-      <h3>Standard Card Rules</h3>
-      <ul>
-        <li>
-          Ace (Waterfall) - The Player who drew this card begins to chug or sip, so then does everybody else. When the person who picked up the card stops drinking the person to their right can stop drinking. When that person stops drinking the person to their right can stop drinking. This goes to the end of the circle. Also known as Tom Ace.
-        </li>
-        <li>
-          2 (You) - The Player who drew this card selects someone who then must drink.
-        </li>
-        <li>
-          3 (Me) - The Player who drew this card must drink.
-        </li>
-        <li>
-          4 (Whores) - Ladies and women drink.
-        </li>
-        <li>
-          5 (Never have I ever) - Every Player holds up 5 fingers and the person who drew the card begins the questioning with a sentence "Never have I ever....." Player must state something that he/she has never done. If any of the other players have done it then they lose a finger. 1st person to lose all five fingers they must drink.
-        </li>
-        <li>
-          6 (Dicks) - Gentlemen or men drink.
-        </li>        
-        <li>
-          7 (Thumb Master) - The player who picks this card can place their thumb anywhere at any time and the last player to notice and place their thumb in the same position must drink. For example if you place your thumb on the person to your lefts' nose then all players must place their thumb on the nose of the player to the left. The last person to do this must drink.
-        </li>        
-        <li>
-          8 (Gambler's Fate) - When a player draws this card they must guess the colour of the next card. If they get it wrong, they drink. If they get it right, they give a drink to another player.
-        </li>        
-        <li>
-          9 (Bust a Rhyme) - The player who drew the 9 says a phrase, then the players go around in the circle saying phrases that rhyme with the original. No phrase may be said twice, the first player who can not come up with a phrase, or says a phrase that doesn't rhyme must drink.
-        </li>        
-        <li>
-          10 (Categories) - The player who drew the 10 picks a category such as "sports teams" or "bands from the '90s," the players then go around in the circle saying items from that category, the first player who can not think of an item or says something not in the category (or if all items have been exhausted) must drink.
-        </li>        
-        <li>
-          Jack (Last slap) - The player who drew the card can place their hand on the table anytime, the last person to place their hand on the table has to drink a second per player in the game.
-        </li>        
-        <li>
-          Queen (Question Master) - Whoever draws this card becomes the "Question Master". Whenever they ask you a question, you must answer their question with another question, or else not answer them at all. If you answer a question with a statement, you must take one drink. This person is the "Question Master" until someone else draws a queen.
-        </li>
-        <li>
-          King (Rule Master) - The 4th King drawn must drink the center cup. The first 3 King's may add drinks to the center cups as well as make a rule.
-        </li>
-      </ul> <!-- .list -->
+    <h3>Standard Card Rules</h3>
+    <p>Ace (Waterfall) - The Player who drew this card begins to chug or sip, so then does everybody else. When the person who picked up the card stops drinking the person to their right can stop drinking. When that person stops drinking the person to their right can stop drinking. This goes to the end of the circle. Also known as Tom Ace.</p>
+    <p>2 (You) - The Player who drew this card selects someone who then must drink.</p>
+    <p>3 (Me) - The Player who drew this card must drink.</p>
+    <p>4 (Whores) - Ladies and women drink.</p>
+    <p>5 (Never have I ever) - Every Player holds up 5 fingers and the person who drew the card begins the questioning with a sentence "Never have I ever....." Player must state something that he/she has never done. If any of the other players have done it then they lose a finger. 1st person to lose all five fingers they must drink.</p>
+    <p>6 (Dicks) - Gentlemen or men drink.</p>
+    <p>7 (Thumb Master) - The player who picks this card can place their thumb anywhere at any time and the last player to notice and place their thumb in the same position must drink. For example if you place your thumb on the person to your lefts' nose then all players must place their thumb on the nose of the player to the left. The last person to do this must drink.</p>
+    <p>8 (Gambler's Fate) - When a player draws this card they must guess the colour of the next card. If they get it wrong, they drink. If they get it right, they give a drink to another player.</p>
+    <p>9 (Bust a Rhyme) - The player who drew the 9 says a phrase, then the players go around in the circle saying phrases that rhyme with the original. No phrase may be said twice, the first player who can not come up with a phrase, or says a phrase that doesn't rhyme must drink.</p>
+    <p>10 (Categories) - The player who drew the 10 picks a category such as "sports teams" or "bands from the '90s," the players then go around in the circle saying items from that category, the first player who can not think of an item or says something not in the category (or if all items have been exhausted) must drink.</p>
+    <p>Jack (Last slap) - The player who drew the card can place their hand on the table anytime, the last person to place their hand on the table has to drink a second per player in the game.</p>
+    <p>Queen (Question Master) - Whoever draws this card becomes the "Question Master". Whenever they ask you a question, you must answer their question with another question, or else not answer them at all. If you answer a question with a statement, you must take one drink. This person is the "Question Master" until someone else draws a queen.</p>
+    <p>King (Rule Master) - The 4th King drawn must drink the center cup. The first 3 King's may add drinks to the center cups as well as make a rule.</p>
   </div> <!-- .row -->
-
+  
 </div> <!-- .container -->

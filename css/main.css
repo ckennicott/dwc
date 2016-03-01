@@ -260,6 +260,31 @@ section.games {
   padding: 5rem 0;
 }
 
+section.game-header {
+  border-top: 1px solid #e0deda;
+  border-bottom: 1px solid #e0deda;
+}
+
+section.fc-intro {
+  background-image: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.6), 
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("../img/fc/flip-cup-header-2.jpg");
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:cover;
+  overflow:hidden;
+  position:relative;
+  text-align:center;
+  padding:13rem 1.5rem;
+}
+@media (min-width: 768px) {
+  section.fc-intro {
+    padding:28rem  1.5rem;
+  }
+}
 
 
 
@@ -303,11 +328,6 @@ section.footer p a {
 .adsense-footer {
   padding-bottom: 20px;
   text-align: center;
-}
-
-.game-header {
-  /*background-color: #2e3133;*/
-  /*color: #888;*/
 }
 
 
