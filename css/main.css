@@ -230,9 +230,6 @@ section.intro p {
 }
 
 
-
-
-
 section.newest-promo p {
   line-height: 26px;
   padding: 0;
@@ -252,106 +249,11 @@ section.newest-promo p a {
 }
 
 
-
-
 section.games {
   text-align:center;
   border-top: 1px solid #e0deda;
   padding: 5rem 0;
 }
-
-section.game-header {
-  /*border-top: 1px solid #e0deda;*/
-  /*border-bottom: 1px solid #e0deda;*/
-}
-section.game-header:after{
-    clear: both;
-    content: "";
-    display: block;
-}
-
-section.game-header .game-section-title {
-  background-image: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.6), 
-      rgba(0, 0, 0, 0.6)
-    ),
-    url("../img/fc/flip-cup-header-2.jpg");
-  background-position:center center;
-  background-repeat:no-repeat;
-  background-size:cover;
-  overflow:hidden;
-  position:relative;
-  text-align:center;
-  padding: 5rem 1.5rem;
-  width: 75%;
-/*  display:table-cell;
-  vertical-align:top;*/
-  padding-left: 10vw;
-  float: left;
-}
-
-section.game-header .game-section-title h1 {
-  font-size:50px;
-  line-height:50px;
-  color:#fff;
-  text-shadow:0 1px 2px rgba(0,0,0,0.4);
-  margin-bottom:2rem
-}
-@media (min-width: 768px) {
-  ssection.game-header .game-section-title h1 {
-    font-size: 56px;
-    line-height:56px;
-  }
-}
-
-section.game-header .game-section-title p {
-  font-size:17px;
-  line-height:22px;
-  color: rgba(255,255,255,0.9);
-  text-shadow:0 1px 2px rgba(0,0,0,0.4);
-  margin-bottom:2rem
-}
-@media (min-width: 768px) {
-  section.game-header .game-section-title p {
-    font-size: 25px;
-    line-height:32px;
-  }
-}
-
-section.game-header .game-section-stats {
-  width: 25%;
-  float: right;
-  padding-right: 10vw;
-  padding-left: 15px;
-  padding-top: 15px;
-  background-color: #2e3133;
-  color: #888;
-/*  display:table-cell;
-  vertical-align:top;
-*/}
-
-section.game-header .game-section-stats p {
-  font-size:15px;
-  line-height:15px;
-  color: rgba(255,255,255,0.9);
-}
-/*@media (min-width: 768px) {
-  section.game-header .game-section-stats p {
-    font-size: 25px;
-    line-height:32px;
-  }
-}*/
-
-section.about {
-  padding: 3em 1.5em 0 1.5em;
-}
-
-section.about p.description {
-  padding: 0;
-}
-
-
 
 section.footer {
   padding: 3rem 0;
@@ -517,6 +419,10 @@ section.footer p a {
 
 .pull-right {
   float: right !important;
+}
+
+.pull-left {
+  float: left !important;
 }
 
 
