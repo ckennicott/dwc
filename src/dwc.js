@@ -6,6 +6,11 @@ var phCtrl = require('./phCtrl')
 var kcCtrl = require('./kcCtrl')
 var boxCtrl = require('./boxCtrl')
 
+// Bootstrap wants jQuery global =(
+window.jQuery = $ = require('jquery')
+// Bootstrap doesn't have a "main" field / export anything =(
+var bootstrap = require('bootstrap/dist/js/bootstrap')
+
 
 var dwc = angular.module("dwc", [
 	'ngRoute',
