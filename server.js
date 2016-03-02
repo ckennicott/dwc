@@ -4,11 +4,11 @@ var app = module.exports = express();
 
 
 app.use(require('prerender-node').set('prerenderServiceUrl', 'http://localhost:3000'));
-app.use(express.static("."));
+app.use(express.static(__dirname + '/dist'));
 
 app.get('*', function(req, res){ 
-  res.sendFile(__dirname + '/index.html'); 
+  res.sendFile(__dirname + '/dist/index.html'); 
 });
 
-app.listen(8082); 
+app.listen(8081); 
 console.log("Starting production instance.");

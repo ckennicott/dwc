@@ -70,4 +70,4 @@ gulp.task('watch', function() {
     gulp.watch('src/**/*.css', ['css'])
 })
 
-gulp.task('default', ['browser-sync', 'watch', 'css', 'javascript'])
+gulp.task('default', ['browser-sync', 'watch', 'css', 'javascript', 'fix-template'])
