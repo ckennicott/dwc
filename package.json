@@ -5,6 +5,17 @@
   "private": "true",
   "dependencies": {
     "express": "latest",
-    "prerender-node": "latest"
+    "prerender-node": "latest",
+    "browser-sync": "latest",
+    "gulp": "latest",
+    "connect-modrewrite": "latest",
+    "browserify": "latest",
+    "gulp-uglify": "latest",
+    "gulp-sourcemaps": "latest",
+    "gulp-util": "latest",
+    "vinyl-source-stream": "latest",
+    "vinyl-buffer": "latest",
+    "angular": "latest",
+    "angularytics": "latest"
   }
 }

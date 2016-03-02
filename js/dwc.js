@@ -1,14 +1,20 @@
-var dwc = angular.module("dwc", [
-	'ngRoute',
-  'angularytics'
-]);
+require('angular')
+// require('angularytics')
+var PageCtrl = require('./PageCtrl')
 
-dwc.config(function(AngularyticsProvider) {
-  AngularyticsProvider.setEventHandlers(['Console', 'GoogleUniversal']);
-  })
-  .run(function(Angularytics) {
-    Angularytics.init();
-});
+var dwc = angular.module("dwc", [
+	'ngRoute'
+]);
+dwc.controller('PageCtrl', ['$scope', PageCtrl])
+
+
+
+// dwc.config(function(AngularyticsProvider) {
+//   AngularyticsProvider.setEventHandlers(['Console', 'GoogleUniversal']);
+//   })
+//   .run(function(Angularytics) {
+//     Angularytics.init();
+// });
 
 dwc.config(function ($locationProvider) {
   $locationProvider.html5Mode(true);
@@ -70,18 +76,9 @@ dwc.directive('secMeter', function() {
  * Services
  */
 
+// dwc.controller("PageCtrl", function ($scope) {
 
-
-
-
-
-/**
- * Controls all other Pages
- */
-dwc.controller('PageCtrl', function ($scope) {
-
-
-});
+// });
 
 
 /**
