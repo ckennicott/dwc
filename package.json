@@ -1,21 +1,39 @@
 {
-  "name": "Drunk-With-Chuck",
-  "description": "...",
-  "version": "0.0.1",
-  "private": "true",
+  "name": "dwc",
+  "version": "1.0.0",
+  "description": "DWC =========",
+  "main": "gulpfile.js",
   "dependencies": {
-    "express": "latest",
-    "prerender-node": "latest",
-    "browser-sync": "latest",
-    "gulp": "latest",
-    "connect-modrewrite": "latest",
-    "browserify": "latest",
-    "gulp-uglify": "latest",
-    "gulp-sourcemaps": "latest",
-    "gulp-util": "latest",
-    "vinyl-source-stream": "latest",
-    "vinyl-buffer": "latest",
-    "angular": "latest",
-    "angularytics": "latest"
-  }
+    "angular-route": "^1.5.0",
+    "angularytics": "^0.4.0",
+    "browser-sync": "^2.11.1",
+    "browserify": "^13.0.0",
+    "connect-modrewrite": "^0.8.5",
+    "gulp": "^3.9.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7",
+    "prerender-node": "^2.2.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "express": "^4.13.4",
+    "angular": "^1.5.0"
+  },
+  "devDependencies": {
+    "gulp-connect": "^3.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ckennicott/ckennicott.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ckennicott/ckennicott.github.io/issues"
+  },
+  "homepage": "https://github.com/ckennicott/ckennicott.github.io"
 }
