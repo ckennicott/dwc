@@ -9,8 +9,6 @@ body {
 }
 
 
-
-
 /*##########################################*/
 /*######## GENERAL TYPOGRAPHY ##############*/
 /*##########################################*/
@@ -250,6 +248,27 @@ section.newest-promo p a {
 }
 
 
+
+section.game-header {
+  border-top: 1px solid #e0deda;
+  border-bottom: 1px solid #e0deda;
+}
+section.game-header h1 {
+  margin:2.5rem 0;
+}
+section.game-header p {
+  line-height: 26px;
+  padding: 0;
+  margin: 2.5rem 0;
+  text-align:left;
+}
+@media (min-width: 1200px) {
+  section.game-header .container {
+    width: 940px;
+  }
+
+
+
 section.games {
   text-align:center;
   border-top: 1px solid #e0deda;
@@ -274,7 +293,7 @@ section.footer p a {
 }
 
 .container-game {
-  padding-bottom: 15px;
+  padding: 2.5rem;
 }
 
 @media (min-width: 1200px) {
