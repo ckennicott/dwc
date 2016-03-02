@@ -1,0 +1,65 @@
+<section class="section-tan">
+
+  <div class="container container-game container-narrow">
+    <div class="row">
+      <div class="col col-md-6">
+        <h1>Power Hour</h1>
+      </div>
+      <div class="col col-md-6">
+        <p>Power hour is a simple yet challenging drinking game. The objective is to drink one shot of beer each minute for an hour. Make it to the end and you'll have downed 7-8 beers.</p>  
+      </div>      
+    </div>
+  </div>
+  
+</section>
+
+<div class="container container-narrow container-game">
+
+
+  <div class="row">
+      <button class="btn btn-success btn-lg" role="button" ng-click="start(30) | trackEvent:'Power Hour':'Start button clicked'" ng-disabled="disableStart">Start</button>
+      <button class="btn btn-info btn-lg pull-right" role="button" ng-click="reset() | trackEvent:'Power Hour':'Reset button clicked'">Reset</button>
+      <div class="row"ng-hide="hideMeters">
+          <div class="col-md-6">
+              <div sec-meter ></div>
+          </div> <!-- End col 1 -->
+
+          <div class="col-md-6">
+              <div shot-meter></div>
+          </div> <!-- End col 2-->
+
+      </div>
+      <div class="row" ng-show="showComplete">
+        <h1>You survived the power hour!</h1>
+        Click reset to play again.
+      </div>
+  </div><!-- .row -->
+
+
+  <hr>
+
+
+  <div class="row">
+
+    <div class="col col-md-3">
+      <h3>Game Info</h3>
+      <p>Players: Unlimited</p>
+      <p>Time: 60m</p>
+      <p>Dificulty: High</p> 
+      <p>Last updated February 2016</p> 
+
+      <h3>Supplies</h3>
+      <p>1 shot glass for each player</p>
+      <p>Lots of beer (7-8 for each player)</p>
+      <p>The power hour timer above</p>
+
+    </div> <!-- .col -->
+
+    <div class="col-md-9">
+      <h3>How to Play</h3>
+      <p>Fill a shot glass with beer and start the timer below. Everytime you hear a tone down another shot of beer.</p>      
+    </div>
+    
+  </div> <!-- .row -->
+
+</div><!-- .container --> 
