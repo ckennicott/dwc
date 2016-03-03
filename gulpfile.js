@@ -12,12 +12,22 @@ var usemin      = require('gulp-usemin');
 var minifyCss   = require('gulp-minify-css');
 var rename      = require('gulp-rename');
 var rimraf      = require('gulp-rimraf');
+var reload      = browserSync.reload;
+var sitemap = require('gulp-sitemap');
 
 gulp.task('fix-template', ['css'], function() {
     return gulp.src('dist/index.src.html')
         .pipe(rimraf())
         .pipe(rename("index.html"))
         .pipe(gulp.dest('dist'));
+});
+
+gulp.task('sitemap', function () {
+    gulp.src('dist/partials/*.html')
+        .pipe(sitemap({
+            siteUrl: 'http://drunkwithchuck.com'
+        }))
+        .pipe(gulp.dest('./dist'));
 });
 
 
@@ -60,14 +70,14 @@ gulp.task('browser-sync', function() {
             '!\\.\\w+$ /index.html [L]'
             ])
           ]
-        },
-        files: ["dist/css/site.css", "dist/js/app.js"]
+        }
     });
 });
 
 gulp.task('watch', function() {
-    gulp.watch('src/**/*.js', ['javascript'])
-    gulp.watch('src/**/*.css', ['css'])
+    gulp.watch('src/**/*.js', ['javascript']);
+    gulp.watch('src/**/*.css', ['fix-template']);
+    gulp.watch(['dist/css/site.css', 'dist/js/app.js', 'dist/partials/*.html']).on('change', reload);
 })
 
 gulp.task('default', ['browser-sync', 'watch', 'css', 'javascript', 'fix-template'])
