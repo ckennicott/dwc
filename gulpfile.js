@@ -76,7 +76,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('watch', function() {
     gulp.watch('src/**/*.js', ['javascript']);
-    gulp.watch('src/**/*.css', ['fix-template']);
+    gulp.watch(['src/**/*.css', 'src/index.src.html'], ['fix-template']);
     gulp.watch(['dist/css/site.css', 'dist/js/app.js', 'dist/partials/*.html']).on('change', reload);
 })
 
