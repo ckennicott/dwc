@@ -31,7 +31,6 @@ dwc.config(['$locationProvider', function ($locationProvider) {
 
 }])
 
-
 /**
  * Routes
  */
