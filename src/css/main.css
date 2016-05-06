@@ -1,11 +1,28 @@
-html {
-  font-family: sans-serif;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
+@font-face {font-family: "thirst-script";
+  src: url("/fonts/thirsty/thirsty-script-rough-reg.eot");
+  src: url("/fonts/thirsty/thirsty-script-rough-reg.eot?#iefix") format("embedded-opentype"),
+  url("/fonts/thirsty/thirsty-script-rough-reg.woff2") format("woff2"),
+  url("/fonts/thirsty/thirsty-script-rough-reg.woff") format("woff"),
+  url("/fonts/thirsty/thirsty-script-rough-reg.ttf") format("truetype");
+}
+@font-face {font-family: "veneer";
+  src: url("/fonts/veneer/veneer.eot");
+  src: url("/fonts/veneer/veneer.eot?#iefix") format("embedded-opentype"),
+  url("/fonts/veneer/veneer.woff2") format("woff2"),
+  url("/fonts/veneer/veneer.woff") format("woff"),
+  url("/fonts/veneer/veneer.ttf") format("truetype");
 }
 
+
+/*html {
+  font-family: serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}*/
+
 body {
-  font-family: "Work sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /*font-family: "Work sans", "Helvetica Neue", Helvetica, Arial, serif;*/
+  font-family: 'Lora', serif;
 }
 
 
@@ -14,57 +31,49 @@ body {
 /*##########################################*/
 
 h1, h2, h3, h4, h5, h6 {
-  color: #2d3238;
+  /*color: #2d3238;*/
   color: #45494d;
 }
 
 
+
 h1 {
-  font-size:30px;
-  line-height:30px;
+  font-size:42px;
+  font-family: "thirst-script";
 }
 @media (min-width: 768px) {
   h1 {
-    font-size: 50px;
-    line-height:50px;
+    font-size: 70px;
   }
-}
-h1.game-title {
-  margin: 0px 0px 0px 0px;
 }
 
 h2 {
-  font-size:26px;
-  line-height:26px;
+  font-size:30px;
+  font-family: "veneer";
 }
 @media (min-width: 768px) {
   h2 {
     font-size: 44px;
-    line-height:44px;
   }
 }
 
 h3 {
-  font-size:22px;
-  line-height:22px;
-  margin: 20px 0;
+  font-size:20px;
+  font-family: "veneer";
+  /*margin: 20px 0;*/
 }
 @media (min-width: 768px) {
   h3 {
-    font-size: 28px;
-    line-height:28px;
+    font-size: 30px;
   }
 }
 
 h5 {
   font-size:14px;
-  line-height:14px;
-  /*font-weight: 500;*/
 }
 @media (min-width: 768px) {
   h5 {
     font-size: 15px;
-    line-height:15px;
   }
 }
 
@@ -82,14 +91,12 @@ p {
 }
 
 p.lead {
-  font-size:18px;
-  line-height:22px;
-  color:#acabaa;
+  font-size:17px;
+  padding: 20px;
 }
 @media (min-width: 768px) {
   p.lead {
-    font-size: 30px;
-    line-height:40px;
+    font-size: 20px;
   }
 }
 
@@ -295,7 +302,6 @@ section.footer p a {
 .container-game {
   padding: 2.5rem;
 }
-
 @media (min-width: 1200px) {
   .container-game {
     width: 940px;
