@@ -41,7 +41,7 @@ dwc.config(['$routeProvider', function ($routeProvider) {
     // Disclaimer
     .when("/disclaimer", {title: "Disclaimer - Drunk With Chuck", templateUrl: "partials/disclaimer.html", controller: "PageCtrl"})
     // Beer Pong
-    .when("/beerpong", {title: "Beer Poing - Drunk With Chuck", templateUrl: "partials/beerpong.html", controller: "PageCtrl"})
+    .when("/beerpong", {title: "Beer Pong - Drunk With Chuck", templateUrl: "partials/beerpong.html", controller: "PageCtrl"})
     // Power Hour
     .when("/powerhour", {title: "Power Hour Timer - Drunk With Chuck", templateUrl: "partials/powerhour.html", controller: "phCtrl"})
     // Kings Cup

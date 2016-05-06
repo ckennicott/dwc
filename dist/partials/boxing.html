@@ -1,76 +1,69 @@
-<section class="section-tan game-header">
-
-  <div class="container">
-    <div class="row">
-      <div class="col col-md-6">
-        <h1>Boxing</h1>
-      </div>
-      <div class="col col-md-6">
-        <p>Boxing is a fun team based game. The game works best with teams of 2, but can be played with teams of 1. Boxers (drinkers) compete in 3 minute rounds until the opposing boxer pukes or quits. The cornermen (non drinking team members) help fill shot glasses during rounds and provide much needed moral support.</p>  
-      </div>      
-    </div>
-  </div>
-  
-</section>
+<div ng-include='"templates/navbar.html"'></div>
 
 <div class="container container-narrow container-game">
+    <h1 class="text-center">&mdash; Boxing &mdash;</h1>
+  <p class="lead">Boxing is a fun team based game. The game works best with teams of 2, but can be played with teams of 1. Boxers (drinkers) compete in 3 minute rounds until the opposing boxer pukes or quits. The cornermen (non drinking team members) help fill shot glasses during rounds and provide much needed moral support.</p>
+  <section class="game-info">
+    <div class="row">
+      <div class="col-md-4">
+        <h5 class="supplies-game-info text-center">Players</h5>
+        <p class="text-center">4 or more <i class="fa fa-blind" aria-hidden="true"></i></p>
+      </div><!-- .col -->
+      <div class="col-md-4">
+        <h5 class="supplies-game-info text-center">Difficulty</h5>
+        <p class="text-center"><i class="fa fa-glass" aria-hidden="true"></i> <i class="fa fa-glass text-muted" aria-hidden="true"></i> <i class="fa fa-glass text-muted" aria-hidden="true"></i></p>
+      </div><!-- .col -->
+      <div class="col-md-4">
+        <h5 class="supplies-game-info text-center">Time</h5>
+        <p class="text-center"><i class="fa fa-clock-o" aria-hidden="true"></i> 2-3 minutes</i></p>
+      </div><!-- .col -->
+    </div><!-- .row -->
+  </section>
+</div><!-- .container -->
 
 
-  <div class="row">
-        <button class="btn btn-success btn-lg" role="button" ng-click="start() | trackEvent:'Boxing':'Start button clicked'" ng-disabled="disableStart">Start</button>
-        <button class="btn btn-danger btn-lg" role="button" ng-click="stop() | trackEvent:'Boxing':'Stop button clicked'" ng-disabled="disableStop">Stop</button>
-        <button class="btn btn-info btn-lg" role="button" ng-click="roll() | trackEvent:'Boxing':'Roll button clicked'" ng-disabled="disableRoll">Roll</button>
-        <button class="btn btn-info btn-lg pull-right" role="button" ng-click="reset() | trackEvent:'Boxing':'Reset button clicked'">Reset</button>
-        <div class="row center">
-          <div class="col-md-4">
-            <h3>{{timerHeading}}</h3>
-            <h4>{{minCount}}:{{secCount | numberFixedLen:2}}</h4>
+<div class="container container-narrow container-game">
+  <section class="game">
+    <div class="row center">
+      <div class="col-md-2 text-left">
+        <button class="game-button game-button-top" role="button" ng-click="start() | trackEvent:'Boxing':'Start button clicked'">Start <i class="fa fa-plus" aria-hidden="true"></i></button>
+        <button class="game-button" role="button" ng-click="stop() | trackEvent:'Boxing':'Stop button clicked'">Stop <i class="fa fa-refresh" aria-hidden="true"></i></button>
+        <button class="game-button" role="button" ng-click="roll() | trackEvent:'Boxing':'Roll button clicked'">Roll <i class="fa fa-refresh" aria-hidden="true"></i></button>
+        <button class="game-button" role="button" ng-click="reset() | trackEvent:'Boxing':'Reset button clicked'">Reset <i class="fa fa-refresh" aria-hidden="true"></i></button>
+      </div> <!-- End col 2-->
+      <div class="col-md-3">
+        <h3>{{timerHeading}}</h3>
+        <h4>{{minCount}}:{{secCount | numberFixedLen:2}}</h4>
+      </div>
+      <div class="col-md-3" ng-show="showIntermission">
+        <h3>Break</h3>
+        <h4>{{intSecCount}}</h4>
+      </div><!-- .col -->
+      <div class="col-md-4">
+        <h3>Roll Results</h3>
+        <div class="row">
+          <div class="col-md-6">
+            <h4>Player 1</h4>
+            <img src="img/dice/{{p1Die}}.svg" width="100" ng-show="showDice">
           </div>
-          <div class="col-md-4" ng-show="showIntermission">
-            <h3>Break</h3>
-            <h4>{{intSecCount}}</h4>
-          </div><!-- .col -->
-          <div class="col-md-4">
-            <h3>Roll Results</h3>
-            <div class="row">
-              <div class="col-md-6">
-                <h4>Player 1</h4>
-                <img src="img/dice/{{p1Die}}.svg" width="100" ng-show="showDice">
-              </div>
-              <div class="col-md-6">
-                <h4>Player 2</h4>
-                <img src="img/dice/{{p2Die}}.svg" width="100" ng-show="showDice">
-              </div>
-            </div>
-            
-          </div><!-- .col -->              
-        </div><!-- .row center -->
-  </div><!-- .row -->
+          <div class="col-md-6">
+            <h4>Player 2</h4>
+            <img src="img/dice/{{p2Die}}.svg" width="100" ng-show="showDice">
+          </div>
+        </div>
+      </div><!-- .col -->              
+    </div><!-- .row -->
+  </section><!-- .section -->
 
 
-  <hr>
+  <h2>Supplies</h2>
+  <ul>
+    <li>2 shot glasses</li>
+    <li>Alcohol of choice</li>
+    <li>2 dice (or virtual dice above)</li>
+    <li>Stopwatch/timer (provided above</li>
+  </ul>
 
-
-  <div class="row">
-    <div class="col col-md-3">
-      <h3>Game Info</h3>
-      <p>Players: 2 - 4</p>
-      <p>Time: 3m/round</p>
-      <p>Dificulty: High</p> 
-      <p>Last updated March 2016</p>
-
-      <h3>Supplies</h3>
-      <p>2 shot glasses</p>
-      <p>Alcohol of choice</p>
-      <p>2 dice (virtual dice porvided above)</p>
-      <p>A stopwatch/timer (provided above)</p>
-        
-    </div> <!-- .col -->
-
-    <div class="col-md-9">
-      <h3>How to Play</h3>
-      <p>The cornermen for each team fill the boxers shot glass. Each boxer takes their first shot. At the same time the timer is started. After downing their first shot each boxer rolls a die. The boxer that rolls the lowest number has to drink. The cornermen quickly fill the shot glasses again and the boxers roll again. This repeats for 3 minutes. After 3 minutes the boxers get a 1 minute break before starting another round.</p>     
-    </div>
-    
-  </div><!-- .row -->
+  <h2>How To Play</h2>
+  <p>The cornermen for each team fill the boxers shot glass. Each boxer takes their first shot. At the same time the timer is started. After downing their first shot each boxer rolls a die. The boxer that rolls the lowest number has to drink. The cornermen quickly fill the shot glasses again and the boxers roll again. This repeats for 3 minutes. After 3 minutes the boxers get a 1 minute break before starting another round.</p> 
 </div><!-- .container -->
