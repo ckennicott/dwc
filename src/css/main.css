@@ -344,9 +344,10 @@ section.footer p a {
   color: #afafaf;
   background-color: transparent;
   font-weight: 500;
-  font-size: 14px;
+  font-size: 19px;
   line-height: 20px;
   padding: 20px 15px 20px 15px;
+  font-family: "veneer";
 }
 .navbar-dwc li a:hover {
   background-color: transparent;
