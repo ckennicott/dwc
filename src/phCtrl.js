@@ -7,9 +7,9 @@ module.exports = function($sce, $scope, $timeout){
   $scope.hideJumbotron = false;
   $scope.hideMeters = false;
   $scope.showComplete = false;
-  $scope.shotProgressStyle = {"background-image": "linear-gradient(90deg, #F0F8FF 50%, transparent 50%, transparent), linear-gradient(90deg, #6495ED 50%, #F0F8FF 50%, #F0F8FF)"};
-  $scope.secProgressStyle = {"background-image": "linear-gradient(90deg, #F0F8FF 50%, transparent 50%, transparent), linear-gradient(90deg, #6495ED 50%, #F0F8FF 50%, #F0F8FF)"};
-  $scope.tone = new Audio('tone.wav');
+  $scope.shotProgressStyle = {"background-image": "linear-gradient(90deg, #fff 50%, transparent 50%, transparent), linear-gradient(90deg, #222 50%, #fff 50%, #fff)"};
+  $scope.secProgressStyle = {"background-image": "linear-gradient(90deg, #fff 50%, transparent 50%, transparent), linear-gradient(90deg, #222 50%, #fff 50%, #fff)"};
+  $scope.tone = new Audio('../tone.wav');
 
   $scope.countdown = function() {
     if ($scope.secToGo < 1) {
@@ -18,11 +18,11 @@ module.exports = function($sce, $scope, $timeout){
       $scope.tone.play();
       if ((60- $scope.shotToGo) < 30) {
         nextdeg = 90 + (6 * (60 - $scope.shotToGo));
-        $scope.shotProgressStyle = {"background-image": "linear-gradient(90deg, #F0F8FF 50%, transparent 50%, transparent), linear-gradient(" + nextdeg + "deg, #6495ED 50%, #F0F8FF 50%, #F0F8FF)"};
+        $scope.shotProgressStyle = {"background-image": "linear-gradient(90deg, #fff 50%, transparent 50%, transparent), linear-gradient(" + nextdeg + "deg, #222 50%, #fff 50%, #fff)"};
       }
       else {
         nextdeg = -90 + (6 * -($scope.shotToGo - 30));
-        $scope.shotProgressStyle = {"background-image": "linear-gradient(" + nextdeg + "deg, #6495ED 50%, transparent 50%, transparent), linear-gradient(270deg, #6495ED 50%, #F0F8FF 50%, #F0F8FF)"};
+        $scope.shotProgressStyle = {"background-image": "linear-gradient(" + nextdeg + "deg, #222 50%, transparent 50%, transparent), linear-gradient(270deg, #222 50%, #fff 50%, #fff)"};
       }
     }
 
@@ -30,11 +30,11 @@ module.exports = function($sce, $scope, $timeout){
 
     if ((60- $scope.secToGo) < 30) {
         nextdeg = 90 + (6 * (60 - $scope.secToGo));
-        $scope.secProgressStyle = {"background-image": "linear-gradient(90deg, #F0F8FF 50%, transparent 50%, transparent), linear-gradient(" + nextdeg + "deg, #6495ED 50%, #F0F8FF 50%, #F0F8FF)"};
+        $scope.secProgressStyle = {"background-image": "linear-gradient(90deg, #fff 50%, transparent 50%, transparent), linear-gradient(" + nextdeg + "deg, #222 50%, #fff 50%, #fff)"};
     }
     else {
       nextdeg = -90 + (6 * -($scope.secToGo - 30));
-      $scope.secProgressStyle = {"background-image": "linear-gradient(" + nextdeg + "deg, #6495ED 50%, transparent 50%, transparent), linear-gradient(270deg, #6495ED 50%, #F0F8FF 50%, #F0F8FF)"};
+      $scope.secProgressStyle = {"background-image": "linear-gradient(" + nextdeg + "deg, #222 50%, transparent 50%, transparent), linear-gradient(270deg, #222 50%, #fff 50%, #fff)"};
     }
 
     if ($scope.shotToGo == 0) {
@@ -75,8 +75,8 @@ module.exports = function($sce, $scope, $timeout){
     $scope.disableStart = false;
     $scope.hideMeters = false;
     $scope.showComplete = false;
-    $scope.shotProgressStyle = {"background-image": "linear-gradient(90deg, #F0F8FF 50%, transparent 50%, transparent), linear-gradient(90deg, #6495ED 50%, #F0F8FF 50%, #F0F8FF)"};
-    $scope.secProgressStyle = {"background-image": "linear-gradient(90deg, #F0F8FF 50%, transparent 50%, transparent), linear-gradient(90deg, #6495ED 50%, #F0F8FF 50%, #F0F8FF)"};
+    $scope.shotProgressStyle = {"background-image": "linear-gradient(90deg, #fff 50%, transparent 50%, transparent), linear-gradient(90deg, #222 50%, #fff 50%, #fff)"};
+    $scope.secProgressStyle = {"background-image": "linear-gradient(90deg, #fff 50%, transparent 50%, transparent), linear-gradient(90deg, #222 50%, #fff 50%, #fff)"};
   }
 
   // Cleanup timer promise

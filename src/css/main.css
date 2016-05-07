@@ -473,8 +473,8 @@ section.footer p a {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  border: 2px solid  #6495ED;
-  background-color: #6495ED;
+  border: 2px solid  #222;
+  background-color: #222;
 }
 
 /* Optional centered circle w/text */  
@@ -482,7 +482,7 @@ section.footer p a {
   position: relative;
   width: 150px;
   height: 150px;
-  background-color: #F0F8FF;
+  background-color: #fff;
   border-radius: 50%;
   margin-left: 23.3px;
   margin-top: 23.3px;
@@ -565,8 +565,8 @@ section.footer p a {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    border: 2px solid  #6495ED;
-    background-color: #6495ED;
+    border: 2px solid  #222;
+    background-color: #222;
   }
   /* -------------------------------------
    * Optional centered circle w/text
@@ -574,7 +574,7 @@ section.footer p a {
   .progress-radial .overlay {
     width: 123px;
     height: 123px;
-    background-color: #F0F8FF;
+    background-color: #fff;
     border-radius: 50%;
     margin-left: 11.5px;
     margin-top: 11.5px;
