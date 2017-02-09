@@ -37,7 +37,7 @@ dwc.config(['$locationProvider', function ($locationProvider) {
 dwc.config(['$routeProvider', function ($routeProvider) {
   $routeProvider
   	// Home
-    .when("/", {title: "Drunk With Chuck", templateUrl: "partials/home.html", controller: "PageCtrl"})
+    .when("/", {title: "Drinking Games Online - Drunk With Chuck", templateUrl: "partials/home.html", controller: "PageCtrl"})
     // Disclaimer
     .when("/disclaimer", {title: "Disclaimer - Drunk With Chuck", templateUrl: "partials/disclaimer.html", controller: "PageCtrl"})
     // Beer Pong
